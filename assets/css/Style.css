@@ -1,6 +1,8 @@
 body{
-    background: -webkit-linear-gradient(left,#FA981D,#894C00,#FA981D);
-    /*background: #FA981D;*/
+    color: white;
+    background: #363131;
+
+
 }
 
 header{
@@ -10,20 +12,24 @@ background: black;
     color: #FA981D;
 }
 * {
-    background: -webkit-linear-gradient(right,red,white);
-    padding: 0px;
-    margin: 0px;
-    box-sizing: border-box;
-    background: #363131;
-    color: white;
+    /*background: -webkit-linear-gradient(right,red,white);*/
+    /*padding: 0px;*/
+    /*margin: 0px;*/
+    /*box-sizing: border-box;*/
+    /*background: #363131;*/
+    /*color: white;*/
+    /*border: #FA981D;*/
 }
 
 .home {
-    width: 100%;
+    background-color: #363131;
+    width: 100vw;
     height: 100vh;
-     background-size: cover;
+     background-size:cover;
     background-image: url("images/photo-1510519138101-570d1dca3d66.jfif");
-    background-repeat: no-repeat;
+    background-position: bottom;
+    /*background-repeat: no-repeat;*/
+    /*background-repeat: no-repeat;*/
 
 }
 
@@ -39,10 +45,15 @@ background: black;
     font-size: 20px;
 }
 
+.aboutMe{
+    background-color: #363131;
+}
+
+
 /*Buttons*/
 .git-button{
     background-color: black;
-
+    border: none;
     border-radius: 45px;
     width: 120px;
     height: 28px;
@@ -54,18 +65,45 @@ background: -webkit-linear-gradient(top, #FA981D,#894C00);
     height: 57px;
     border-radius: 45px;
     font-size: 30px;
+    border: none;
 
 
 }
 
+.square{
+    background-color: rgba(118, 114, 114, 0.6);
+    width: 730px;
+    height: 268px;
+    border-radius: 10px;
+}
+
+.footer{
+    background-image: url(images/Desktop-LG-3840x2160-BG.jpg);
+    background-color: #363131;
+    width: 100vw;
+    height: 100vh;
+    background-size:cover;
+    background-position: bottom;
+    opacity: 50%;
+}
 /*footer-button*/
 .footer-button{
     width: 237px;
     height: 54px;
     border-radius: 45px;
     background-color: #633700;
+    border: none;
 }
 
+
+.cvButton{
+    border-radius: 45px;
+    color: white;
+    background-color: black;
+    width: 120px;
+    height: 28px;
+    border: none;
+}
 
 .sub_topic{
   color: #CD9A5A;
