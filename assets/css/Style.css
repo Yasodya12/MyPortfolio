@@ -1,101 +1,319 @@
+/*body{*/
+/*    color: white;*/
+/*    background: #363131;*/
+
+
+/*}*/
+
+/*header{*/
+/*background: black;*/
+/*}*/
+/*.topic{*/
+/*    color: #FA981D;*/
+/*}*/
+/** {*/
+/*    !*background: -webkit-linear-gradient(right,red,white);*!*/
+/*    !*padding: 0px;*!*/
+/*    !*margin: 0px;*!*/
+/*    !*box-sizing: border-box;*!*/
+/*    !*background: #363131;*!*/
+/*    !*color: white;*!*/
+/*    !*border: #FA981D;*!*/
+/*}*/
+
+/*.home {*/
+/*    background-color: #363131;*/
+/*    width: 100vw;*/
+/*    height: 100vh;*/
+/*     background-size:cover;*/
+/*    background-image: url("images/photo-1510519138101-570d1dca3d66.jfif");*/
+/*    background-position: bottom;*/
+/*    !*background-repeat: no-repeat;*!*/
+/*    !*background-repeat: no-repeat;*!*/
+
+/*}*/
+
+/*.home h3{*/
+
+/*    font-size: 32px;*/
+
+/*}*/
+/*.home h1{*/
+/*    font-size: 60px;*/
+/*}*/
+/*.home h6{*/
+/*    font-size: 20px;*/
+/*}*/
+
+/*.aboutMe{*/
+/*    background-color: #363131;*/
+/*}*/
+
+
+/*!*Buttons*!*/
+/*.git-button{*/
+/*    background-color: black;*/
+/*    border: none;*/
+/*    border-radius: 45px;*/
+/*    width: 120px;*/
+/*    height: 28px;*/
+/*}*/
+/*!*hire-me-button*!*/
+/*.hire-me{*/
+/*background: -webkit-linear-gradient(top, #FA981D,#894C00);*/
+/*    width: 214px;*/
+/*    height: 57px;*/
+/*    border-radius: 45px;*/
+/*    font-size: 30px;*/
+/*    border: none;*/
+
+
+/*}*/
+
+/*.square{*/
+/*    background-color: rgba(118, 114, 114, 0.6);*/
+/*    width: 730px;*/
+/*    height: 268px;*/
+/*    border-radius: 10px;*/
+/*}*/
+
+/*.footer{*/
+/*    background-image: url(images/Desktop-LG-3840x2160-BG.jpg);*/
+/*    background-color: #363131;*/
+/*    width: 100vw;*/
+/*    height: 100vh;*/
+/*    background-size:cover;*/
+/*    background-position: bottom;*/
+/*    opacity: 50%;*/
+/*}*/
+/*!*footer-button*!*/
+/*.footer-button{*/
+/*    width: 237px;*/
+/*    height: 54px;*/
+/*    border-radius: 45px;*/
+/*    background-color: #633700;*/
+/*    border: none;*/
+/*}*/
+
+
+/*.cvButton{*/
+/*    border-radius: 45px;*/
+/*    color: white;*/
+/*    background-color: black;*/
+/*    width: 120px;*/
+/*    height: 28px;*/
+/*    border: none;*/
+/*}*/
+
+/*.sub_topic{*/
+/*  color: #CD9A5A;*/
+/*}*/
+
+/*.last_form{*/
+/*    color: #CD9A5A;*/
+/*}*/
+
+/*.footer_bottom{*/
+/*    background: black;*/
+/*    width: 100vw;*/
+/*    padding: 20px 0;*/
+/*    text-align: center;*/
+/*}*/
+/*.footer_bottom p{*/
+/*    font-size: 14px;*/
+/*    word-spacing: 2px;*/
+/*    text-transform: capitalize;*/
+/*}*/
+/*footer span{*/
+/*    text-transform: uppercase;*/
+/*    opacity: 0.4;*/
+/*    font-weight: 200;*/
+/*}*/
+*{
+    padding: 0;
+    margin: 0;
+}
 body{
+
+    overflow-x:hidden;
+}
+*{
     color: white;
-    background: #363131;
-
-
+    background-color: black;
 }
-
-header{
-background: black;
-}
-.topic{
-    color: #FA981D;
-}
-* {
-    /*background: -webkit-linear-gradient(right,red,white);*/
-    /*padding: 0px;*/
-    /*margin: 0px;*/
-    /*box-sizing: border-box;*/
-    /*background: #363131;*/
-    /*color: white;*/
-    /*border: #FA981D;*/
-}
-
-.home {
-    background-color: #363131;
+body>section{
+    border-bottom:  20px solid #FA981D;
+    /*border: 2px solid #FA981D;*/
     width: 100vw;
     height: 100vh;
-     background-size:cover;
-    background-image: url("images/photo-1510519138101-570d1dca3d66.jfif");
-    background-position: bottom;
-    /*background-repeat: no-repeat;*/
-    /*background-repeat: no-repeat;*/
+
+    box-sizing: border-box;
 
 }
-
-.home h3{
-
+/*body>section:before{*/
+/*    background-image: url("images/Desktop-LG-3840x2160-BG.jpg");*/
+/*    background-size: cover;*/
+/*    background-position: bottom;*/
+/*    opacity: 50%;*/
+/*    background-color: black;*/
+/*}*/
+.home>h3{
+    background: none;
+    position: relative;
+    width: 300px;
+    top:35%;
+    left: 24.9%;
+    /*top:41.8%;*/
+    /*left: 27.9%;*/
     font-size: 32px;
+    font-weight: bold;
+    z-index: 2;
+
+    /*height: 1024px;*/
+    /*width: 1407px;*/
+    /*left: 479px;*/
+    /*top: -4074px;*/
+    /*border-radius: 0px;*/
 
 }
-.home h1{
+.home>h1{
+    background: none;
+    position: relative;
+    left: 24.9%;
+    top:41%;
     font-size: 60px;
+    font-weight: bold;
+    z-index: 2;
 }
-.home h6{
+.home>h1>.topic{
+    color: #FA981D;
+}
+
+.home>h6{
+    background: none;
+    position: relative;
+    left: 24.9%;
+    top:45%;
     font-size: 20px;
+    font-weight: bold;
 }
-
-.aboutMe{
-    background-color: #363131;
+.home>img{
+    /*position: relative;*/
+    /*left: 50%;*/
+    /*top: 250px;*/
+    /*height: 308px;*/
+    /*width: 298px;*/
+    position: absolute;
+    width: 21.1798152%;
+    height:45.078125%;
+    left: 36%;
+    top: 7%;
+    /*left: 43%;*/
+    /*top: 31.272%;*/
+    z-index: 2;
 }
+.left{
+   position: absolute;
+    height: 100vh;
 
-
-/*Buttons*/
-.git-button{
-    background-color: black;
-    border: none;
-    border-radius: 45px;
-    width: 120px;
-    height: 28px;
 }
-/*hire-me-button*/
+/*.bottom\&top{*/
+/*    background: -webkit-linear-gradient(right, #FA981D,#894C00);*/
+/*    width: 100vw;*/
+/*    height: 25px;*/
+/*    left: 0.6%;*/
+/*    top: -6%;*/
+/*    position: relative;*/
+/*    background-color: #FA981D;*/
+/*}*/
+::-webkit-scrollbar{
+    display: none;
+}
+#twitter{
+    position: relative;
+    left: 26.9%;
+    top:51%;
+}
+#linkedIn{
+    position: relative;
+    left: 27.9%;
+    top:51%;
+}
+#instagrame{
+    position: relative;
+    left: 28.9%;
+    top:51%;
+}
+#gitHub{
+    position: relative;
+    left: 29.9%;
+    top:51%;
+}
 .hire-me{
+    position: relative;
+    left: 24.9%;
+    top:50%;
 background: -webkit-linear-gradient(top, #FA981D,#894C00);
     width: 214px;
     height: 57px;
     border-radius: 45px;
     font-size: 30px;
     border: none;
-
-
+}
+.aboutMe>section>h2>bdi{
+    color: #FA981D;
 }
 
+#p1{
+   position: relative;
+    align-content: center;
+    /*size: 30px;*/
+    /*left: 10%;*/
+    /*top: 10%;*/
+}
+
+/*#p2{*/
+/*    position: relative;*/
+/*    top: 5%;*/
+/*    left: 10%;*/
+/*}*/
+
+#abtMe{
+    font-weight: bold;
+    font-size: 60px;
+}.aboutMe>section>h2{
+
+    font-size: 40px;
+}
+.aboutMe>section>article>p{
+
+    font-size: 30px;
+}
+.sub_topic{
+
+}
+.sub_topic{
+  color: #CD9A5A;
+}
 .square{
+z-index: 2;
+}
+
+/*.sub_topic{*/
+/*    background-color:  rgba(118, 114, 114, 0.6);*/
+/*}*/
+.square1{
+
     background-color: rgba(118, 114, 114, 0.6);
     width: 730px;
     height: 268px;
     border-radius: 10px;
-}
 
-.footer{
-    background-image: url(images/Desktop-LG-3840x2160-BG.jpg);
-    background-color: #363131;
-    width: 100vw;
-    height: 100vh;
-    background-size:cover;
-    background-position: bottom;
-    opacity: 50%;
+    z-index: 1;
 }
-/*footer-button*/
-.footer-button{
-    width: 237px;
-    height: 54px;
-    border-radius: 45px;
-    background-color: #633700;
-    border: none;
+body>section>section>div{
+
 }
-
-
 .cvButton{
     border-radius: 45px;
     color: white;
@@ -104,32 +322,3 @@ background: -webkit-linear-gradient(top, #FA981D,#894C00);
     height: 28px;
     border: none;
 }
-
-.sub_topic{
-  color: #CD9A5A;
-}
-
-.last_form{
-    color: #CD9A5A;
-}
-
-.footer_bottom{
-    background: black;
-    width: 100vw;
-    padding: 20px 0;
-    text-align: center;
-}
-.footer_bottom p{
-    font-size: 14px;
-    word-spacing: 2px;
-    text-transform: capitalize;
-}
-footer span{
-    text-transform: uppercase;
-    opacity: 0.4;
-    font-weight: 200;
-}
-
-
-
-
