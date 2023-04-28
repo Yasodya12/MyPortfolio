@@ -328,9 +328,8 @@ background: -webkit-linear-gradient(top, #FA981D,#894C00);
 
     font-size: 30px;
 }
-.sub_topic{
 
-}
+
 .sub_topic{
   color: #CD9A5A;
     background: none;
@@ -344,27 +343,62 @@ z-index: 2;
 /*}*/
 .square1{
     position: relative;
-    left: 50%;
+    left: 47%;
     top: 30%;
     width: 800px;
     height: 268px;
     z-index: 3;
 }
 .square1>ul>li{
+    position: relative;
+    left: 2%;
+    top: 30%;
     background:none;
     font-size: 20px;
     font-weight: 400;
     line-height: 24px;
+    /*letter-spacing: 0em;*/
+    text-align: left;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.square1>h3{
+
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 36px;
     letter-spacing: 0em;
     text-align: left;
+
     margin-bottom: 20px;
     margin-top: 20px;
 }
-.square1>ul{
-    background: none;
+.square2{
+    position: relative;
+    left: 47%;
+    top: -10mm;
+    width: 800px;
+    height: 268px;
+    z-index: 3;
 }
-.square1>h3{
+.square2>ul>li{
+    position: relative;
+    left: 2%;
+    top: 30%;
+    background:none;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    /*letter-spacing: 0em;*/
+    text-align: left;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
 
+.square2>h3{
+    color: #CD9A5A;
+    background: none;
     font-size: 30px;
     font-weight: 400;
     line-height: 36px;
@@ -377,6 +411,16 @@ z-index: 2;
 
 body>section>section>div{
 
+}
+.photo{
+    position: relative;
+    top: -70%;
+    left: 3%;
+}
+.photo>img{
+
+    width: 30%;
+    height: 70%;
 }
 .cvButton{
     border-radius: 45px;
