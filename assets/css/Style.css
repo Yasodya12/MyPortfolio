@@ -49,15 +49,18 @@
 /*    background-color: #363131;*/
 /*}*/
 
-
+.home{
+    background-image: url("images/test.png");
+    background-size: 100%;
+}
 /*!*Buttons*!*/
-/*.git-button{*/
-/*    background-color: black;*/
-/*    border: none;*/
-/*    border-radius: 45px;*/
-/*    width: 120px;*/
-/*    height: 28px;*/
-/*}*/
+.git-button{
+    background-color: black;
+    border: none;
+    border-radius: 45px;
+    width: 120px;
+    height: 28px;
+}
 /*!*hire-me-button*!*/
 /*.hire-me{*/
 /*background: -webkit-linear-gradient(top, #FA981D,#894C00);*/
@@ -86,14 +89,17 @@
 /*    background-position: bottom;*/
 /*    opacity: 50%;*/
 /*}*/
-/*!*footer-button*!*/
-/*.footer-button{*/
-/*    width: 237px;*/
-/*    height: 54px;*/
-/*    border-radius: 45px;*/
-/*    background-color: #633700;*/
-/*    border: none;*/
-/*}*/
+/*footer-button*/
+.footer-button{
+    position: absolute;
+    width: 237px;
+    height: 54px;
+    border-radius: 45px;
+    background-color: #633700;
+    border: none;
+    left: 25%;
+    top: 65%;
+}
 
 
 /*.cvButton{*/
@@ -112,23 +118,37 @@
 /*.last_form{*/
 /*    color: #CD9A5A;*/
 /*}*/
+#gold{
+    position: absolute;
+    width: 20%;
+    height: 20%;
+    left: -1%;
+    top: 2%;
+}
+.background{
 
-/*.footer_bottom{*/
-/*    background: black;*/
-/*    width: 100vw;*/
-/*    padding: 20px 0;*/
-/*    text-align: center;*/
-/*}*/
-/*.footer_bottom p{*/
-/*    font-size: 14px;*/
-/*    word-spacing: 2px;*/
-/*    text-transform: capitalize;*/
-/*}*/
-/*footer span{*/
-/*    text-transform: uppercase;*/
-/*    opacity: 0.4;*/
-/*    font-weight: 200;*/
-/*}*/
+    position: relative;
+    left: 5%;
+    top: 3%;
+    height: 100vh;
+    width: 100vw;
+}
+.footer_bottom{
+    background: black;
+    width: 100vw;
+    padding: 20px 0;
+    text-align: center;
+}
+.footer_bottom p{
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+footer span{
+    text-transform: uppercase;
+    opacity: 0.4;
+    font-weight: 200;
+}
 *{
     padding: 0;
     margin: 0;
@@ -144,6 +164,7 @@ body{
 body>section{
 
     border-bottom:  20px solid #FA981D;
+
     /*border-top:  20px solid #FA981D;*/
     /*border: 2px solid #FA981D;*/
     width: 100vw;
@@ -534,11 +555,14 @@ body>section>section>div{
 .skillSet{
     position: relative;
     display: flex;
-    top: -40px;
+    top: -10px;
     left:5%;
 }
 .skillSet>div{
-    margin: 100px;
+
+    margin-left: 100px;
+    margin-right: 100px;
+
 }
 .skillSet>div>img{
     width: 97%;
@@ -561,10 +585,20 @@ body>section>section>div{
 }
 .projectZone>section{
     position: relative;
-    top:20%;
+    top:10%;
     display: flex;
+    margin-right: 150px;
+    margin-left: 100px;
     /*justify-content: ;*/
 
+}
+.projectZone>section>div>h4{
+    font-size: 35px;
+    margin: 10px;
+}
+.projectZone>section>div>p{
+    font-size: 25px;
+    margin: 10px;
 }
 .projectZone>section>div{
     height: 80%;
@@ -572,7 +606,7 @@ body>section>section>div{
 }
 .projectZone>section>div>img{
     height: 80%;
-    width: 80%;
+    width: 100%;
 }
 .topic2{
 
@@ -580,13 +614,115 @@ body>section>section>div{
     /*height: 44px;*/
     /*left: 127px;*/
     /*top: 377px;*/
-
-
     font-style: normal;
     font-weight: 700;
     font-size: 25px;
     line-height: 30px;
-
     color: #CD9A5A;
+}
+.form>section>h1{
+    font-size: 80px;
+    text-align: center;
+    margin-bottom: 136px;
 
+}
+.socials{
+    position: absolute;
+    left: 35%;
+}
+.socials>a{
+
+    margin: 20px;
+
+}
+.last_form{
+    color: #CD9A5A;
+}
+
+.form>section{
+    position: relative;
+    width: 50%;
+    height: 50%;
+    left: 2%;
+    top: 15%;
+}
+.form>section>address>a:nth-child(1){
+    position: absolute;
+    left: 25%;
+    top: 50%;
+    margin-bottom: 10px;
+
+}
+#number{
+    position: absolute;
+    left: 35%;
+    top: 70%;
+    margin: 10px;
+}
+.form>section>h5{
+    font-size: 50px;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+.form>section>address{
+    font-size: 40px;
+
+}
+.form>form>fieldset>legend{
+        font-size: 50px;
+}
+.form>form{
+    position: relative;
+    left: 55%;
+    top: -40%;
+    height: 86%;
+    width: 40%;
+
+}
+.form>form>fieldset>input{
+   background: #36313199;
+    margin: 20px;
+    color: white;
+
+}
+.form>form>fieldset{
+    height: 80%;
+    width: 70%;
+    margin: 20px;
+    color: white;
+
+}
+#massage{
+    border: none;
+    height: 30%;
+    width: 60%;
+    position: absolute;
+    left: 5%;
+    top: 30%;
+
+}
+#subject{
+    height: 4%;
+    width: 50%;
+    position: absolute;
+    left: 5%;
+    top: 22%;
+    border: none;
+}
+#name{
+
+    position: absolute;
+    top: 10%;
+    height: 4%;
+    border: none;
+    left: 5%;
+}
+#email{
+    position: absolute;
+    top: 10%;
+    height: 4%;
+    width: 40%;
+    border: none;
+    left: 30%;
 }
