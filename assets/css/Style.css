@@ -47,13 +47,13 @@
     position: relative;
     font-weight: normal;
     left: 40%;
-    top: 22%;
+    top: -84%;
 }
 .square2>ul{
     background: none;
     position: relative;
     left: 38%;
-    top: 250px;
+    top: -720px;
 
 }
 .square2>ul>li{
@@ -217,7 +217,7 @@ body>section{
 }
 #bc2{
     width: 100vw;
-    height: 98vh;
+    height: 100vh;
     opacity: 50%;
 }
 .specifation{
@@ -467,7 +467,7 @@ body>section>section>div{
     width:24%;
     height: 60%;
     top: -135%;
-    left: 7%;
+    left: 5%;
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 10px;
@@ -483,7 +483,7 @@ body>section>section>div{
 .cvButton{
     border-radius: 45px;
     position: relative;
-    top: 240px;
+    top: -700px;
     left: 80%;
     color: white;
     background-color: black;
