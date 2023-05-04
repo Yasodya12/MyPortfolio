@@ -1,18 +1,181 @@
-.aboutMe>section>h2{
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+*{
+    font-family: 'Inter', sans-serif;
+}
+body{
+    height: 100vh;
+}
+#ira{
+    position: absolute;
+    height: 0.5%;
+    width: 25%;
+    top: 36%;
+    left: 0;
+    background-color: #FA981D;
+}
+.home{
     position: relative;
-    left: 5%;
-    top:-900px;
+}
+#bc{
+    width: 100vw;
+    height: 98vh;
+    opacity: 50%;
+}
+.home>h1{
+    font-family: 'Inter', sans-serif;
+    background: none;
+    position: absolute;
+    left: 24.9%;
+    top:36.5%;
+    font-size: 80px;
+    font-weight: bold;
+    z-index: 2;
+}
+.home>h1>.topic{
+    color: #FA981D;
+}
+.home>h3{
+    font-family: 'Inter', sans-serif;
+    background: none;
+    position: absolute;
+    width: 40%;
+    top:34%;
+    left: 24.9%;
+    font-size: 40px;
+    font-weight: bold;
+    z-index: 2;
+}
+.home>h6{
+    font-family: 'Inter', sans-serif;
+    background: none;
+    position: absolute;
+    left: 24.9%;
+    top:53%;
+    font-size: 30px;
+    font-weight: bold;
+}
+.so{
+    position: absolute;
+    display: flex;
+    background: none;
+    top: 66%;
+    left: 40%;
+}
+.so>a{
+    height: 45%;
+    width: 45%;
+    background: none;
+}
+.hire-me{
+    font-family: 'Inter', sans-serif;
+    position: absolute;
+    left: 24.9%;
+    top:64%;
+    background: -webkit-linear-gradient(top, #FA981D,#894C00);
+    width: 214px;
+    height: 57px;
+    border-radius: 45px;
+    font-size: 30px;
+    border: none;
+}
+/*End of Home*/
+
+
+
+/*About Me*/
+.aboutMe{
+    position: relative;
+}
+.aboutMe>section>h2{
+    font-family: 'Inter', sans-serif;
+    position: absolute;
+    left: 4%;
+    top:4%;
     background: none;
     font-size: 65px;
 }
-
 #p1{
-    position: relative;
+    font-family: 'Inter', sans-serif;
+    position: absolute;
     font-size: 35px;
-    top: -870px;
+    top: 15%;
     background: none;
     text-align: center;
 }
+.photo{
+    background-image: url("images/IMG_20230417_230824_655.jpg");
+    position: absolute;
+    width:24%;
+    height: 60%;
+    top: 30%;
+    left: 5%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+}
+#exp{
+    font-family: 'Inter', sans-serif;
+    font-size: 50px;
+    background: none;
+    position: absolute;
+    font-weight: normal;
+    left: 40%;
+    top: 70%;
+}
+#kotuwa{
+    position: absolute;
+    height: 30%;
+    width: 58%;
+    top: 37%;
+    left: 39%;
+    background-color: #767272;
+    opacity: 60%;
+    border-radius: 10px;
+}
+.square1{
+    position: absolute;
+    left: 40%;
+    top: 39%;
+    background: none;
+}
+.cvButton{
+    font-family: 'Inter', sans-serif;
+    border-radius: 45px;
+    position: absolute;
+    top: 86%;
+    left: 88%;
+    color: white;
+    background-color: black;
+    width: 150px;
+    height: 30px;
+    border: none;
+}
+.square2>ul{
+    background: none;
+    position: absolute;
+    left: 39%;
+    top: 78%;
+
+}
+#kotuwa2{
+    position: absolute;
+    height: 10%;
+    width: 58%;
+    background-color: #767272;
+    opacity: 60%;
+    top: 80%;
+    left: 39%;
+    border-radius: 10px;
+}
+#education{
+    font-size: 50px;
+    background: none;
+    position: absolute;
+    font-weight: normal;
+    left: 40%;
+    top: 29%;
+}
+
 .square1>h3{
     color: #CD9A5A;
     background: none;
@@ -27,35 +190,8 @@
     margin: 20px;
     background: none;
 }
-.square1{
-    position: relative;
-    left: 40%;
-    top: -84%;
-    background: none;
-}
-#education{
-    font-size: 50px;
-    background: none;
-    position: relative;
-    font-weight: normal;
-    left: 40%;
-    top: -88%;
-}
-#exp{
-    font-size: 50px;
-    background: none;
-    position: relative;
-    font-weight: normal;
-    left: 40%;
-    top: -84%;
-}
-.square2>ul{
-    background: none;
-    position: relative;
-    left: 38%;
-    top: -720px;
 
-}
+
 .square2>ul>li{
     font-size: 28px;
     margin: 30px;
@@ -66,17 +202,250 @@
     background: none;
     font-size: 35px;
 }
+/*End of About ME*/
 
 
 
+/*My specification*/
+.specifationbefore{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+
+.specifation> h2{
+    position: absolute;
+    top: 0;
+    font-weight: bold;
+    font-size: 60px;
+    margin-left: 4%;
+    margin-top: 4%;
+    background: none;
+}
+.spesify{
+    position: absolute;
+    display: flex;
+    top: 14%;
+    left:10%;
+    background: none;
+}
+.specifation>h1{
+    position: absolute;
+    left: 0;
+    top:  65%;
+    font-weight: bold;
+    font-size: 60px;
+    margin-left: 4%;
+    background: none;
+}
+#kotuwa4{
+    position: absolute;
+    height: 10%;
+    width: 81%;
+    left: 7%;
+    top: 80%;
+    background-color: rgb(118, 114, 114, 0.6);
+    border-radius: 10px;
+    display: flex;
+}
+
+/*End of Sepefication*/
 
 
+/*Project Zone*/
+.projectZone>h1{
+    position: absolute;
+    top: 5%;
+    left: 3%;
+    font-weight: bold;
+    background: none;
+    font-size: 60px;
+    margin-left: 4%;
+    z-index: 2;
+}
+#raumkotuwa{
+    position: absolute;
+    top: 8%;
+    left: 5%;
+    width: 30%;
+    height: 10%;
+    background-color: #767272;
+    opacity: 80%;
+    border-radius: 45px;
+}
+.projectZone>section{
+    position: absolute;
+    top:27%;
+    display: flex;
+    margin-right: 150px;
+    margin-left: 100px;
+    background: none;
+    /*justify-content: ;*/
 
+}
 
-/*!*Buttons*!*/
-body{
+.projectZone{
+    position: relative;
+    top: -40px;
     height: 100vh;
 }
+.projectZone>img{
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 98vh;
+    opacity: 25%;
+    z-index: 0;
+}
+
+
+.projectZone>section>div>h4{
+    font-size: 35px;
+    margin: 10px;
+    background: none;
+}
+.projectZone>section>div>h4>u{
+    background: none;
+}
+.projectZone>section>div>h4>u>b{
+    background: none;
+}
+.projectZone>section>div>p{
+    font-size: 25px;
+    margin: 10px;
+    background: none;
+}
+.projectZone>section>div{
+    height: 80%;
+    width: 80%;
+    background: none;
+}
+.projectZone>section>div>img{
+    height: 80%;
+    width: 100%;
+}
+/*End of Project Zone*/
+
+
+
+/*Form*/
+.form{
+    position: relative;
+}
+.form>section>h1{
+    font-size: 80px;
+    text-align: center;
+    margin-bottom: 136px;
+    background: none;
+
+}
+.form{
+    background-image: url("images/Desktop-LG-3840x2160-BG.jpg");
+
+    position: relative;
+    top: -10%;
+    height: 100vh;
+    width: 100vw;
+}
+.form>section{
+    z-index: 2;
+    position: relative;
+    width: 50%;
+    height: 50%;
+    left: 2%;
+    top: 15%;
+    background: none;
+}
+.form>section>address>a:nth-child(1){
+    z-index: 2;
+    position: absolute;
+    left: 25%;
+    top: 50%;
+    margin-bottom: 10px;
+    background: none;
+
+}
+
+
+
+
+
+
+
+.form>section>h5{
+    z-index: 2;
+    position: absolute;
+    font-size: 50px;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    top: 73%;
+    left: 40%;
+    background: none;
+}
+.form>section>address{
+    z-index: 2;
+    font-size: 40px;
+    background: none;
+
+}
+.form>form>fieldset>legend{
+    font-size: 50px;
+    background: none;
+}
+.form>form{
+    position: absolute;
+    left: 55%;
+    top: 10%;
+    height: 86%;
+    width: 40%;
+    background: none;
+}
+.form>form>fieldset>input{
+    background: #36313199;
+    margin: 20px;
+    color: white;
+
+}
+.form>form>fieldset{
+    height: 80%;
+    width: 70%;
+    margin: 20px;
+    color: white;
+
+}
+.socials{
+    position: absolute;
+    left: 38%;
+    top: 115%;
+    background: none;
+}
+.socials>a{
+    background: none;
+    margin: 20px;
+
+}
+#email{
+    position: absolute;
+    top: 10%;
+    height: 4%;
+    width: 35%;
+    border: none;
+    left: 36%;
+}
+#anthimakotuwa{
+    z-index: 0;
+    position: absolute;
+    height: 50%;
+    width: 40%;
+    left: 5%;
+    top: 2%;
+    background-color: #767272;
+    border-radius: 45px;
+}
+
+/*End of Form*/
+
 .git-button{
     background-color: black;
     border: none;
@@ -98,7 +467,7 @@ body{
 .footer-button{
     position: absolute;
     width: 237px;
-    height: 20px;
+    height: 60px;
     border-radius: 45px;
     background-color: #633700;
     border: none;
@@ -165,40 +534,8 @@ body>section{
 
 }
 
-.home>h3{
-    background: none;
-    position: relative;
-    width: 40%;
-    top:-67%;
-    left: 24.9%;
-
-    font-size: 40px;
-    font-weight: bold;
-    z-index: 2;
 
 
-}
-.home>h1{
-    background: none;
-    position: relative;
-    left: 24.9%;
-    top:-68%;
-    font-size: 80px;
-    font-weight: bold;
-    z-index: 2;
-}
-.home>h1>.topic{
-    color: #FA981D;
-}
-
-.home>h6{
-    background: none;
-    position: relative;
-    left: 24.9%;
-    top:-71%;
-    font-size: 30px;
-    font-weight: bold;
-}
 #logo{
     position: absolute;
     width: 21.1798152%;
@@ -210,11 +547,7 @@ body>section{
     z-index: 2;
 
 }
-#bc{
-    width: 100vw;
-    height: 98vh;
-    opacity: 50%;
-}
+
 #bc2{
     width: 100vw;
     height: 100vh;
@@ -231,275 +564,76 @@ body>section{
 }
 
 .left{
-   position: absolute;
+    position: absolute;
     height: 100vh;
 
 }
 
+/*Home Socials*/
+/*#twitter{*/
+/*    position: relative;*/
+/*    left: 26.9%;*/
+/*    top:-66%;*/
+/*    background: none;*/
+/*}*/
+/*#linkedIn{*/
+/*    position: relative;*/
+/*    left: 27.9%;*/
+/*    top:-66%;*/
+/*    background: none;*/
+/*}*/
+/*#instagrame{*/
+/*    position: relative;*/
+/*    left: 28.9%;*/
+/*    top:-66%;*/
+/*    background: none;*/
+/*}*/
+/*#gitHub{*/
+/*    position: relative;*/
+/*    left: 29.9%;*/
+/*    top:-66%;*/
+/*    background: none;*/
+/*}*/
 
-#twitter{
-    position: relative;
-    left: 26.9%;
-    top:-66%;
-    background: none;
-}
-#linkedIn{
-    position: relative;
-    left: 27.9%;
-    top:-66%;
-    background: none;
-}
-#instagrame{
-    position: relative;
-    left: 28.9%;
-    top:-66%;
-    background: none;
-}
-#gitHub{
-    position: relative;
-    left: 29.9%;
-    top:-66%;
-    background: none;
-}
-.hire-me{
-    position: relative;
-    left: 24.9%;
-    top:-67%;
-background: -webkit-linear-gradient(top, #FA981D,#894C00);
-    width: 214px;
-    height: 57px;
-    border-radius: 45px;
-    font-size: 30px;
-    border: none;
-}
 .aboutMe>section>h2>bdi{
     color: #FA981D;
 }
 
 
-/*#abtMe{*/
-/*    font-weight: bold;*/
-/*    font-size: 80px;*/
-/*    margin-left: 4%;*/
-/*    margin-top: 2%;*/
-/*}*/
-/*.aboutMe>section>h2{*/
-
-/*    font-size: 40px;*/
-/*}*/
-/*#education{*/
-
-/*    position: relative;*/
-/*    width: 273px;*/
-/*    height: 81px;*/
-/*    left: 44vw;*/
-/*    top: 4vh;*/
-/*    margin-bottom: 60px;*/
-
-/*    font-style: normal;*/
-/*    font-weight: 400;*/
-/*    font-size: 55px;*/
-/*    line-height: 48px;*/
-/*    text-align: center;*/
-
-/*    color: #FFFFFF;*/
-
-/*}*/
-/*#exp{*/
-/*    position: relative;*/
-/*    width: 273px;*/
-/*    height: 81px;*/
-/*    left: 44vw;*/
-/*    top: -1vh;*/
-/*    z-index: 2;*/
-/*    !*font-family: 'Inter';*!*/
-/*    font-style: normal;*/
-/*    font-weight: 400;*/
-/*    font-size: 55px;*/
-/*    line-height: 48px;*/
-/*    text-align: center;*/
-
-/*    color: #FFFFFF;*/
-/*}*/
-/*.aboutMe>section>article>p{*/
-
-/*    !*justify-content: center;*!*/
-/*    font-size: 40px;*/
-/*    margin-left: 4%;*/
-/*    margin-right: 4%;*/
-/*    margin-top: 1.5%;*/
-/*    display: flex;*/
-/*    align-items: center;*/
-/*    text-align: center;*/
-
-/*}*/
 
 
 
 .square{
-z-index: 2;
+    z-index: 2;
 }
 
 
-/*.square1{*/
-/*    position: relative;*/
-/*    left: 47%;*/
-/*    top: 30%;*/
-/*    width: 800px;*/
-/*    height: 25%;*/
-/*    z-index: 3;*/
-/*}*/
-/*.square1>ul>li{*/
-/*    position: relative;*/
-/*    left: 2%;*/
-/*    top: 30%;*/
-/*    background:none;*/
-/*    font-size: 20px;*/
 
-/*    text-align: left;*/
-/*    margin-bottom: 10px;*/
-/*    margin-top: 10px;*/
-/*    width: 40vw;*/
-/*}*/
-/*#ul{*/
-/*    position: relative;*/
-/*    top: -105%;*/
-/*    left: -2%;*/
 
-/*}*/
-/*#ul2{*/
-/*    position: relative;*/
-/*    top: -100%;*/
-/*    left: -2%;*/
-/*}*/
-/*#he{*/
-/*    position: relative;*/
-/*    top: -130%;*/
-/*    left: -3%;*/
-/*}*/
-/*#dree{*/
-/*    position: relative;*/
-/*    top: -103%;*/
-/*    left: -3%;*/
-/*}*/
-/*.square1>h3{*/
-/*    color: #CD9A5A;*/
-/*    background: none;*/
-/*    font-size: 40px;*/
-/*    font-weight: 400;*/
-/*    line-height: 36px;*/
-/*    letter-spacing: 0em;*/
-/*    text-align: left;*/
 
-/*    margin-bottom: 20px;*/
-/*    margin-top: 20px;*/
-/*}*/
-/*.square1>ul>li{*/
-/*    position: relative;*/
-/*    left: 2%;*/
-/*    top: 30%;*/
-/*    background:none;*/
-/*    font-size: 30px;*/
-/*    font-weight: 400;*/
-/*    line-height: 24px;*/
-/*    !*letter-spacing: 0em;*!*/
-/*    text-align: left;*/
-/*    margin-bottom: 10px;*/
-/*    margin-top: 10px;*/
-/*}*/
 
-/*.square2{*/
-/*    position: relative;*/
-/*    left: 47%;*/
-/*    top: -10mm;*/
-/*    width: 800px;*/
-/*    height: 268px;*/
-/*    z-index: 3;*/
-/*}*/
-/*.square2>ul>li{*/
-/*    position: relative;*/
-/*    left: 0%;*/
-/*    top: 30%;*/
-/*    background:none;*/
-/*    font-size: 30px;*/
-/*    font-weight: 400;*/
-/*    line-height: 24px;*/
-/*    !*letter-spacing: 0em;*!*/
-/*    text-align: left;*/
-/*    margin-bottom: 10px;*/
-/*    margin-top: 10px;*/
-/*}*/
-
-/*.square2>h3{*/
-/*    position: relative;*/
-/*    color: #CD9A5A;*/
-/*    background: none;*/
-/*    font-size: 40px;*/
-/*    font-weight: 400;*/
-/*    line-height: 36px;*/
-/*    letter-spacing: 0em;*/
-/*    text-align: left;*/
-/*    left: -3%;*/
-/*    top:-3%;*/
-/*    margin-bottom: 20px;*/
-/*    margin-top: 20px;*/
-/*}*/
 
 body>section>section>div{
 
 }
-/*.photo{*/
-/*    position: relative;*/
-/*    width:30.44%;*/
-/*    height: 70%;*/
-/*    border-color: #FA981D;*/
-/*    top: -85%;*/
-/*    left: 5%;*/
-/*    border-radius: 10px;*/
-/*}*/
-/*.photo>div{*/
-/*    border-color: #FA981D;*/
-/*    background-color: red;*/
-/*}*/
-.photo{
-    background-image: url("images/IMG_20230417_230824_655.jpg");
-    position: relative;
-    width:24%;
-    height: 60%;
-    top: -135%;
-    left: 5%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 10px;
-}
-/*.photo>img{*/
 
-/*    width: 30%;*/
-/*    height: 70%;*/
-/*}*/
+
+
 .specifation{
     height: 97vh;
 }
-.cvButton{
-    border-radius: 45px;
+
+#kotuwa3{
     position: relative;
-    top: -700px;
-    left: 80%;
-    color: white;
-    background-color: black;
-    width: 150px;
-    height: 30px;
-    border: none;
+    height: 45%;
+    width: 75%;
+    left: 8%;
+    top: -80%;
+    background-color: #767272;
+    opacity: 60%;
+    border-radius: 10px;
 }
-.specifation> h2{
-    position: absolute;
-    top: 205%;
-    font-weight: bold;
-    font-size: 60px;
-    margin-left: 4%;
-    margin-top: 4%;
-    background: none;
-}
+
 .topic{
     color: #FA981D;
     background: none;
@@ -522,19 +656,37 @@ body>section>section>div{
     width: 70%;
 }
 
-.specifation>h1{
-    position: relative;
-    left: 0;
-    top: -810px;
-    font-weight: bold;
-    font-size: 60px;
-    margin-left: 4%;
+
+
+#kotuwa4>div{
+    z-index: 2;
     background: none;
+    padding-left: 6%;
+    padding-right: 6%;
 }
-.skillSet{
+
+/*#kotuwa5{
+    position: relative;
+    height: 10%;
+    width: 81%;
+    left: 7%;
+    top: -128%;
+
+    border-radius: 10px;
+    display: flex;
+}*/
+#kotuwa4>div>img {
+    background: none;
+    width: 6vw;
+    height: 9vh;
+}
+#kotuwa4>div{
+
+}
+/*.skillSet{
     position: relative;
     display: flex;
-    top: -820px;
+    top: -10%;
     left:5%;
     background: none;
 }
@@ -552,7 +704,7 @@ body>section>section>div{
 }
 .spesify>div>img{
     background: none;
-}
+}*/
 .spesify>div>p{
     background: none;
 }
@@ -563,174 +715,35 @@ body>section>section>div{
     background: none;
 
 }
-.specifationbefore{
-    height: 100vh;
-    width: 100vw;
-}
-.spesify{
-    position: relative;
-    display: flex;
-    top: -800px;
-    left:10%;
+
+.img1{
     background: none;
 }
 
-.projectZone{
-    position: relative;
-    top: -40px;
-    height: 100vh;
-}
-.projectZone>img{
-    position: absolute;
-    top: 0;
-    width: 100vw;
-    height: 98vh;
-    opacity: 25%;
-    z-index: 0;
-}
-.projectZone>h1{
-    position: relative;
-    top: 7%;
-    left: 1%;
-    font-weight: bold;
-    background: none;
-    font-size: 60px;
-    margin-left: 4%;
-   z-index: 2;
-}
-.projectZone>section{
-    position: relative;
-    top:10%;
-    display: flex;
-    margin-right: 150px;
-    margin-left: 100px;
-    background: none;
-    /*justify-content: ;*/
-
-}
-.projectZone>section>div>h4{
-    font-size: 35px;
-    margin: 10px;
-    background: none;
-}
-.projectZone>section>div>h4>u{
-    background: none;
-}
-.projectZone>section>div>h4>u>b{
-    background: none;
-}
-.projectZone>section>div>p{
-    font-size: 25px;
-    margin: 10px;
-    background: none;
-}
-.projectZone>section>div{
-    height: 80%;
-    width: 80%;
-    background: none;
-}
-.projectZone>section>div>img{
-    height: 80%;
-    width: 100%;
-}
 .topic2{
 
-
+    background: none;
     font-style: normal;
     font-weight: 700;
     font-size: 25px;
     line-height: 30px;
     color: #CD9A5A;
 }
-.form>section>h1{
-    font-size: 80px;
-    text-align: center;
-    margin-bottom: 136px;
-    background: none;
 
-}
 
-.socials{
-    position: absolute;
-    left: 35%;
-    background: none;
-}
-.socials>a{
-    background: none;
-    margin: 20px;
 
-}
 .last_form{
     color: #CD9A5A;
     background: none;
 }
-.form{
-    background-image: url("images/Desktop-LG-3840x2160-BG.jpg");
 
-    position: relative;
-    top: -10%;
-    height: 100vh;
-    width: 100vw;
-}
-.form>section{
-    position: relative;
-    width: 50%;
-    height: 50%;
-    left: 2%;
-    top: 15%;
-    background: none;
-}
-.form>section>address>a:nth-child(1){
-    position: absolute;
-    left: 25%;
-    top: 50%;
-    margin-bottom: 10px;
-    background: none;
-
-}
 #number{
     position: absolute;
     left: 35%;
     top: 70%;
     margin: 10px;
 }
-.form>section>h5{
-    font-size: 50px;
-    text-align: center;
-    margin-top: 100px;
-    margin-bottom: 50px;
-    background: none;
-}
-.form>section>address{
-    font-size: 40px;
-    background: none;
 
-}
-.form>form>fieldset>legend{
-        font-size: 50px;
-    background: none;
-}
-.form>form{
-    position: relative;
-    left: 55%;
-    top: -40%;
-    height: 86%;
-    width: 40%;
-background: none;
-}
-.form>form>fieldset>input{
-   background: #36313199;
-    margin: 20px;
-    color: white;
-
-}
-.form>form>fieldset{
-    height: 80%;
-    width: 70%;
-    margin: 20px;
-    color: white;
-
-}
 
 #massage{
     border: none;
@@ -757,11 +770,7 @@ background: none;
     border: none;
     left: 5%;
 }
-#email{
-    position: absolute;
-    top: 10%;
-    height: 4%;
-    width: 40%;
-    border: none;
-    left: 30%;
+
+section{
+    user-select: none;
 }
