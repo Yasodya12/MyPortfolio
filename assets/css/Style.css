@@ -1,20 +1,43 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 *{
     font-family: 'Inter', sans-serif;
+    background-color: black;
 }
 body{
     height: 100vh;
+    background-color: black;
+}
+#gold{
+    position: absolute;
+    width: 20%;
+    height: 20%;
+    left: -1%;
+    top: 2%;
+    background: none;
+}
+#logo {
+    position: absolute;
+    width: 21.1798152%;
+    height: 45.078125%;
+    left: 40%;
+    top: 7%;
+    background: none;
+
+    z-index: 2;
 }
 #ira{
     position: absolute;
     height: 0.5%;
-    width: 25%;
+    width: 23%;
     top: 36%;
     left: 0;
     background-color: #FA981D;
 }
 .home{
     position: relative;
+}
+#twitter{
+    background: none;
 }
 #bc{
     width: 100vw;
@@ -58,7 +81,8 @@ body{
     position: absolute;
     display: flex;
     background: none;
-    top: 66%;
+    gap: 10px;
+    top: 65%;
     left: 40%;
 }
 .so>a{
@@ -70,7 +94,7 @@ body{
     font-family: 'Inter', sans-serif;
     position: absolute;
     left: 24.9%;
-    top:64%;
+    top:63%;
     background: -webkit-linear-gradient(top, #FA981D,#894C00);
     width: 214px;
     height: 57px;
@@ -477,14 +501,7 @@ body{
 
 
 
-#gold{
-    position: absolute;
-    width: 20%;
-    height: 20%;
-    left: -1%;
-    top: 2%;
-    background: none;
-}
+
 .background{
 
     position: relative;
@@ -535,19 +552,6 @@ body>section{
 }
 
 
-
-#logo{
-    position: absolute;
-    width: 21.1798152%;
-    height:45.078125%;
-    left: 40%;
-    top: 7%;
-    background: none;
-
-    z-index: 2;
-
-}
-
 #bc2{
     width: 100vw;
     height: 100vh;
@@ -569,31 +573,7 @@ body>section{
 
 }
 
-/*Home Socials*/
-/*#twitter{*/
-/*    position: relative;*/
-/*    left: 26.9%;*/
-/*    top:-66%;*/
-/*    background: none;*/
-/*}*/
-/*#linkedIn{*/
-/*    position: relative;*/
-/*    left: 27.9%;*/
-/*    top:-66%;*/
-/*    background: none;*/
-/*}*/
-/*#instagrame{*/
-/*    position: relative;*/
-/*    left: 28.9%;*/
-/*    top:-66%;*/
-/*    background: none;*/
-/*}*/
-/*#gitHub{*/
-/*    position: relative;*/
-/*    left: 29.9%;*/
-/*    top:-66%;*/
-/*    background: none;*/
-/*}*/
+
 
 .aboutMe>section>h2>bdi{
     color: #FA981D;
@@ -774,3 +754,338 @@ body>section>section>div{
 section{
     user-select: none;
 }
+/*Home page*/
+@media all and (max-width:1800px) {
+    .home>h3{
+        left: 23%;
+    }
+    .home>h1{
+        left: 23%;
+    }
+    .home>h6{
+        left: 23%;
+    }
+    #ira{
+
+        width: 22%;
+    }
+    .hire-me{
+        left: 23%;
+    }
+}
+@media all and (max-width:1645px) {
+    .home>h3{
+        left: 22%;
+    }
+    .home>h1{
+        left: 22%;
+    }
+    .home>h6{
+        left: 22%;
+    }
+    #ira{
+
+        width: 21%;
+    }
+    .hire-me{
+        left: 22%;
+    }
+    .so{
+        left: 38%;
+    }
+}
+@media all and (max-width:1560px) {
+    .home > h1 {
+        font-size: 70px;
+        top: 38.5%;
+    }
+
+    #ira {
+        top: 38%;
+    }
+
+    .home > h3 {
+        top: 37%;
+        font-size: 30px;
+    }
+
+    .home > h6 {
+        font-size: 20px;
+    }
+
+    .hire-me {
+        width: 204px;
+        height: 57px;
+        top: 59%;
+    }
+
+    .so {
+        left: 38%;
+    }
+
+    .home > h6 {
+        top: 51%;
+    }
+
+    #logo {
+        width: 25.1798152%;
+        height: 37.078125%;
+        top: 13%;
+        left: 35%;
+    }
+
+    .so {
+        top: 60.5%
+    }
+
+    #gold {
+        width: 17%;
+        height: 15%;
+    }
+}
+@media all and (max-width:1280px){
+    .home>h6{
+        top: 55%;
+    }
+}
+@media all and (max-width:1224px){
+    .hire-me{
+        font-size: 25px;
+        height: 40px;
+        width: 150px;
+    }
+}
+@media all and (max-width:1200px){
+
+
+    .home>h1{
+        font-size: 50px;
+        top:39.5%;
+    }
+    #logo {
+
+        width: 21.1798152%;
+        height: 35.078125%;
+        left: 42%;
+        top: 15%;
+    }
+    .so{
+        top: 61%;
+        left: 43%;
+    }
+    .home>h6{
+
+
+        left: 21.9%;
+        top:54%;
+        font-size: 15px;
+        font-weight: bold;
+    }
+    #ira {
+
+        width: 21%;
+        top: 39%;
+        left: 0;
+
+    }
+
+    #gold{
+
+        width: 20%;
+        height: 15%;
+        left: -4%;
+        top: 1%;
+
+    }
+}
+@media all and (max-width:955px){
+    #logo {
+
+        width: 21.1798152%;
+        height: 30.078125%;
+        left: 47%;
+        top: 18%;
+    }
+    .so{
+        top: 61%;
+        left: 47%;
+    }
+}
+@media all and (max-width: 820px){
+    #gold{
+        height: 15%;
+        width: 30%;
+    }
+    #logo{
+        top: 23%;
+        left: 55%;
+        height: 25%;
+    }
+    .home>h6{
+        font-size: 21px;
+        top: 50%;
+    }
+    .so{
+        left: 53%;
+    }
+}
+@media all and (max-width: 770px){
+    #gold{
+        width: 25%;
+        height: 18%;
+        left: -4%;
+        top: 1%;
+
+    }
+    #logo {
+
+        width: 25.1798152%;
+        height: 25.078125%;
+        left: 53%;
+        top: 22%;
+    }
+    .home>h6{
+        left: 21.9%;
+        top:56%;
+        font-size: 15px;
+        font-weight: bold;
+    }
+    .so{
+        top: 61%;
+        left: 50%;
+    }
+    .hire-me{
+
+        left: 20.9%;
+        top:60%;
+        width: 190px;
+        height: 50px;
+    }
+}
+    @media all and (max-width: 650px){
+        #gold{
+            left: -14%;
+            width: 284px;
+            height: 157px;
+        }
+        #logo{
+            width: 347px;
+            height: 460px;
+            left: 15%;
+            opacity: 50%;
+
+        }
+        .home>h3{
+            font-size: 22px;
+            left: 10%;
+            width: 100vw;
+            top: 35%;
+        }
+        .home>h1{
+            text-align: center;
+            font-size: 50px;
+            left: 0;
+            top: 37%;
+        }
+        .hire-me{
+            left: 7%;
+            top: 73%;
+        }
+        .home>h6{
+            top: 58%;
+            text-align: center;
+            left: 5%;
+            font-size: 20px;
+        }
+        #ira{
+            top: 69%;
+            width: 90vw;
+            left: 4%;
+        }
+        .so{
+            top: 74%;
+            justify-content: left;
+            left: 54%;
+        }
+    }
+@media all and (max-width: 414px){
+    #gold{
+        height: 20%;
+        width: 50%;
+        left: -10%;
+        top: 0;
+    }
+    #logo{
+        height: 30%;
+        width: 30%;
+        z-index: 0;
+        top: 18%;
+        left: 57%;
+    }
+    .hire-me{
+
+        left: 8.9%;
+        top:73%;
+        width: 100px;
+        height: 40px;
+        font-size: 20px;
+    }
+    .so{
+        top: 74%;
+        left: 50%;
+
+    }
+}
+@media all and (max-width: 393px){
+    .so{
+
+    }
+    .hire-me{
+
+        left: 8.9%;
+        top:73%;
+        width: 100px;
+        height: 40px;
+        font-size: 20px;
+    }
+}
+@media all and (max-width: 375px){
+    #gold{
+        height: 20%;
+        width: 50%;
+        left: -10%;
+        top: 0;
+    }
+    #logo{
+        height: 40%;
+        width: 40%;
+        z-index: 0;
+        top: 13%;
+        left: 51%;
+    }
+    .home>h3{
+        z-index: 1;
+        left: 4%;
+        top: 31%;
+    }
+    .home>h1{
+        z-index: 1;
+        top: 34%;
+    }
+    .home>h6{
+        z-index: 1;
+    }
+    .so{
+        left: 50%;
+        top: 74%;
+    }
+    .hire-me{
+
+        left: 8.9%;
+        top:73%;
+        width: 100px;
+        height: 40px;
+        font-size: 20px;
+    }
+}
+/*End of Home page*/
