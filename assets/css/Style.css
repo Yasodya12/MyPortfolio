@@ -135,6 +135,7 @@ body{
     left: 5%;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: left;
     border-radius: 10px;
 }
 #exp{
@@ -793,6 +794,12 @@ section{
     .so{
         left: 38%;
     }
+
+/*  About ME  */
+    .cvButton{
+        left: 80%;
+    }
+/*  End of Aboubt Me  */
 }
 @media all and (max-width:1560px) {
     .home > h1 {
@@ -856,8 +863,7 @@ section{
     }
 }
 @media all and (max-width:1200px){
-
-
+    /*Home page*/
     .home>h1{
         font-size: 50px;
         top:39.5%;
@@ -896,6 +902,113 @@ section{
         left: -4%;
         top: 1%;
 
+    }
+/* End of Home */
+/*About Me*/
+    .cvButton{
+        left: 80%;
+    }
+    #p1{
+        font-size: 30px;
+    }
+    #education{
+        font-size: 40px;
+    }
+    #he{
+        font-size: 25px;
+    }
+    .square1>ul>li{
+        font-size: 20px;
+    }
+    #dree{
+        font-size: 25px;
+    }
+    #exp{
+        font-size: 40px;
+    }
+    .square2>ul>li{
+        font-size: 20px;
+    }
+    .cvButton{
+        font-size: 15px;
+    }
+    .photo{
+        background-position: left;
+    }
+/* End of About Me*/
+}
+@media all and (max-width:1280px){
+/*About Me*/
+    #abtMe{
+        font-size: 55px;
+    }
+    #education{
+        font-size: 35px;
+    }
+    #he{
+        font-size: 25px;
+    }
+    #dree{
+        font-size: 25px;
+    }
+    .square1>ul>li{
+        font-size: 20px;
+    }
+    .square2>ul>li{
+        font-size: 20px;
+    }
+    .cvButton{
+        font-size: 15px;
+        height: 25px;
+        width: 150px;
+        top: 89%;
+    }
+    #kotuwa2{
+        height: 15%;
+
+    }
+    #exp{
+        font-size: 35px;
+    }
+    #p1{
+        font-size: 25px;
+    }
+/*  End of About Me  */
+}
+@media all and (max-width:1024px){
+    #abtMe{
+        font-size: 50px;
+    }
+    #education{
+        font-size: 30px;
+    }
+    #he{
+        font-size: 20px;
+    }
+    #dree{
+        font-size: 20px;
+    }
+    .square1>ul>li{
+        font-size: 15px;
+    }
+    .square2>ul>li{
+        font-size: 15px;
+    }
+    .cvButton{
+        font-size: 10px;
+        height: 25px;
+        width: 100px;
+        top: 89%;
+    }
+    #kotuwa2{
+        height: 15%;
+
+    }
+    #exp{
+        font-size: 30px;
+    }
+    #p1{
+        font-size: 20px;
     }
 }
 @media all and (max-width:955px){
@@ -962,6 +1075,32 @@ section{
         height: 50px;
     }
 }
+@media all and (max-width: 540px){
+    #education{
+        top: 45%;
+        left: 4%;
+    }
+    /*#he{*/
+    /*    left: 1%;*/
+    /*    top: 50%;*/
+    /*}*/
+    #kotuwa{
+        top: 51%;
+        left: 3%;
+        height: 19%;
+        width: 94%;
+    }
+    .photo{
+        top: 15%;
+        height: 25%;
+        width: 25%;
+    }
+    #p1{
+        text-align: center;
+        width: 50%;
+        left: 40%;
+    }
+}
     @media all and (max-width: 650px){
         #gold{
             left: -14%;
@@ -1008,7 +1147,30 @@ section{
             left: 54%;
         }
     }
-@media all and (max-width: 414px){
+@media all and (max-width: 412px){
+    .square2>ul{
+        left: 0;
+        top: 75%;
+    }
+    .cvButton{
+        top: 85%;
+        left: 70%;
+    }
+    #kotuwa2{
+        height: 13%;
+        width: 95vw;
+        top: 76%;
+        left: 2%;
+    }
+    #exp{
+        top: 71%;
+        left: 3%;
+    }
+    .square1{
+        width: 100vw;
+        top: 52%;
+        left: 4%;
+    }
     #gold{
         height: 20%;
         width: 50%;
@@ -1086,6 +1248,17 @@ section{
         width: 100px;
         height: 40px;
         font-size: 20px;
+    }
+}
+@media all and (max-width: 280px){
+    .home>h1{
+        top: 36%;
+        font-size: 38px;
+
+    }
+    .so{
+        left: 45%;
+        top: 80%;
     }
 }
 /*End of Home page*/
