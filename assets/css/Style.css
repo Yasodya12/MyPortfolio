@@ -40,6 +40,7 @@ body{
     background: none;
 }
 #bc{
+    
     width: 100vw;
     height: 98vh;
     opacity: 50%;
@@ -96,11 +97,12 @@ body{
     left: 24.9%;
     top:63%;
     background: -webkit-linear-gradient(top, #FA981D,#894C00);
+    border: 2px solid gray;
     width: 214px;
     height: 57px;
-    border-radius: 45px;
+    border-radius: 10px;
     font-size: 30px;
-    border: none;
+
 }
 /*End of Home*/
 
@@ -345,7 +347,7 @@ body{
 
 .projectZone{
     position: relative;
-    top: -40px;
+
     height: 100vh;
 }
 .projectZone>img{
@@ -405,7 +407,7 @@ body{
     background-image: url("images/Desktop-LG-3840x2160-BG.jpg");
 
     position: relative;
-    top: -10%;
+
     height: 100vh;
     width: 100vw;
 }
@@ -592,7 +594,7 @@ body>section{
 
 #bc2{
     width: 100vw;
-    height: 100vh;
+    height: 97.9vh;
     opacity: 50%;
 }
 .specifation{
@@ -848,6 +850,10 @@ section{
         #raumkotuwa {
             top: 7.5%;
         }
+        .projectZone>section{
+            height: 63vh;
+            width: 90vw;
+        }
 
 /*  End Project Zone     */
 }
@@ -913,6 +919,9 @@ section{
         top: 8.5%;
         left: 4.5%;
     }
+    .projectZone>section{
+        margin-left: 80px;
+    }
 
     /*  End Project Zone     */
 }
@@ -948,7 +957,10 @@ section{
 
             width: 44%;
         }
-
+        .projectZone>section{
+            height: 58vh;
+            margin-left: 68px;
+        }
         /*  End Project Zone     */
 }
 
@@ -1069,6 +1081,7 @@ section{
 /*  End of About Me  */
 
 /*  Specification  */
+
     #kotuwa3{
         width: 90vw;
         left: 4%;
@@ -1084,8 +1097,8 @@ section{
 
     /*Project Zone */
     #raumkotuwa {
-
         width: 42%;
+        top: 9.5%;
     }
 
     /*  End Project Zone     */
@@ -1149,9 +1162,6 @@ section{
     }
     .git-button{
         font-size: 10px;
-
-
-
         width: 100px;
         height: 20px;
     }
@@ -1188,8 +1198,12 @@ section{
     }
 
 /*   Specification */
-    #kotuwa4{
-        top: 80%;
+    .specifation>h1 {
+        top: 60%;
+        font-size: 50px;
+    }
+    #kotuwa4 {
+        top: 78%;
     }
     .img1{
         height: 10vh;
@@ -1216,13 +1230,19 @@ section{
         /*  End sepecification  */
 
     /*PRoject ZOne*/
+    .projectZone{
+        position: relative;
+        top: 0.01%
 
+
+    }
     .projectZone>h1 {
-
+        top: 3%;
         font-size: 50px;
     }
     #raumkotuwa{
-        height: 8%;
+        height: 9%;
+        top: 6.5%;
         width: 45%;
     }
     /*  ENd Project Zone  */
@@ -1240,6 +1260,12 @@ section{
 @media all and (max-width:1000px){
     #raumkotuwa {
         font-size: 55px;
+    }
+    .form>section>address>a:nth-child(1) {
+        font-size: 20px;
+    }
+    #number{
+        font-size: 20px;
     }
 }
 @media all and (max-width:955px){
@@ -1420,20 +1446,20 @@ section{
 /*  Form  */
     .form>section>h1 {
         font-size: 45px;
-        left: 3%;
-        top: 3%;
+        left: -11%;
+        top: -15%;
+        width: 100vw;
     }
 
     .form>section>address>a:nth-child(1) {
-
         font-size: 20px;
-        top: 38%;
-        left: 9%;
+        top: 10%;
+        left: 55%;
     }
     #number {
         font-size: 20px;
-        top: 55%;
-        left: 19%;
+        top: 23%;
+        left: 63%;
     }
     #email {
 
@@ -1455,16 +1481,20 @@ section{
         font-size: 40px;
     }
     .socials{
-        top: 89%;
-        left: 7%;
+        top: 154%;
+        left: 59%;
+        width: 100vw;
+    }
+    .form>section>h5{
+        left: -2vw;
+        top: 55vh;
+        width: 100vw;
     }
     .form>form {
-
-        left: 43%;
-        top: 10%;
-        height: 86%;
-        width: 69%;
-
+        left: 12%;
+        top: 23%;
+        height: 88%;
+        width: 120%;
     }
 /*  End of Form  */
 
@@ -1540,7 +1570,19 @@ section{
 
     }
 /*  End Specification  */
-}
+
+/*  Project Zone  */
+    .projectZone>h1{
+        top: 4%;
+    }
+    .projectZone>section{
+        height: 51vh;
+        margin-left: 46px;
+    }
+    }
+    /* ENd Project Zone  */
+
+
 @media all and (max-width: 620px){
     #he {
         font-size: 20px;
@@ -1551,6 +1593,15 @@ section{
     .cvButton{
     left: 79vw;
     }
+
+/*  Project Zone  */
+    #raumkotuwa{
+        width: 57vw;
+    }
+    .git-button{
+      width: 15vw;
+    }
+/*  End Project Zone  */
 }
     @media all and (max-width: 650px){
         #gold{
@@ -1605,6 +1656,12 @@ section{
             top: 86vh;
         }
         /* ENd About Me*/
+
+    /*  Project Zone  */
+        #raumkotuwa{
+            width: 54vw;
+        }
+    /*  End Project Zone  */
 
     }
 @media all and (max-width: 540px){
@@ -1674,6 +1731,15 @@ section{
     }
     /*  ENd of Aboubt Me  */
 
+/*  Project ZOne  */
+    #raumkotuwa{
+        width: 64vw;
+    }
+    .projectZone>section{
+        margin-left: 29px;
+        height: 39vh;
+    }
+/* End Project ZOne  */
 
 /*  Form  */
     .socials {
@@ -1828,6 +1894,16 @@ section{
     }
     /*    ENd of Abount ME*/
 
+    /*  Project ZOne  */
+    #raumkotuwa{
+        width: 85vw;
+    }
+    .projectZone>section{
+        margin-left: 29px;
+        height: 30vh;
+    }
+    /* End Project ZOne  */
+
     /*  Last Form  */
     .form>section>h1{
         left: 1%;
@@ -1881,6 +1957,12 @@ section{
         width: 66%;
         left: 5%;
     }
+    .footer-button {
+        width: 140px;
+        height: 40px;
+        left: 23%;
+        top: 83%;
+    }
     /*  End of Last Form  */
 }
 @media all and (max-width: 422px){
@@ -1890,6 +1972,20 @@ section{
         width: 70%;
         left: -2%;
         top: 3%;
+    }
+    .form>form {
+        left: 3%;
+        top: 25%;
+        height: 63%;
+        width: 120%;
+    }
+    .form>section>h5 {
+        top: 110%;
+    }
+    .socials {
+        width: 81vw;
+
+        left: 25%;
     }
 }
 @media all and (max-width: 393px){
@@ -2127,3 +2223,153 @@ section{
 /*End of Home page*/
 
 
+
+/*Animation*/
+
+/*Home*/
+
+.hire-me:hover{
+    transition: 1s;
+
+    border-radius: 10px;
+    background: black;
+}
+
+#twitter:hover{
+    transition: 1s;
+    transform: scale(2);
+}
+#instagrame:hover{
+    transition: 1s;
+    transform: scale(2);
+}
+#linkedIn:hover{
+    transition: 1s;
+    transform: scale(2);
+}
+#gitHub:hover{
+    transition: 1s;
+    transform: scale(2);
+}
+/*End Home*/
+
+/*About Me*/
+.photo:hover{
+    border-radius: 30px;
+    transform: rotateY(30deg);
+    transition: 1s;
+}
+#kotuwa:hover{
+    transition: 1s;
+    background: rgba(0, 0, 0, 0.6);
+}
+#kotuwa2:hover{
+    transition: 1s;
+    background: rgba(0, 0, 0, 0.6);
+}
+/*End About Me*/
+
+/* Spesification */
+
+#kotuwa4:hover{
+    transition: 1s;
+    background: rgba(0, 0, 0, 0.6);
+}
+#kotuwa3:hover{
+    transition: 1s;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+#kotuwa3>div>div:nth-child(1):hover{
+    transition: 1s;
+    transform: scale(1.5);
+
+}
+
+#kotuwa3>div>div:nth-child(2):hover{
+    transition: 1s;
+    transform: scale(1.5);
+
+}
+#kotuwa3>div>div:nth-child(3):hover{
+    transition: 1s;
+    transform: scale(1.5);
+
+}
+#kotuwa3>div>div:nth-child(4):hover{
+    transition: 1s;
+    transform: scale(1.5);
+
+}
+
+#kotuwa4>div:nth-child(1):hover{
+    transition: 1s;
+    transform: scale(2);
+
+}
+
+#kotuwa4>div:nth-child(2):hover{
+    transition: 1s;
+    transform: scale(2);
+
+}
+#kotuwa4>div:nth-child(3):hover{
+    transition: 1s;
+    transform: scale(2);
+
+}
+#kotuwa4>div:nth-child(4):hover{
+    transition: 1s;
+    transform: scale(2);
+
+}
+#kotuwa4>div:nth-child(5):hover{
+    transition: 1s;
+    transform: scale(2);
+
+}
+/*End Spesification */
+
+
+
+.projectZone>section>div:nth-child(1):hover{
+    transition: 1s;
+    transform: scale(1.2);
+    perspective: 5000px;
+
+}
+.projectZone>section>div:nth-child(2):hover{
+    transition: 1s;
+    transform: scale(1.2);
+
+
+}
+.projectZone>section>div:nth-child(3):hover{
+    transition: 1s;
+    transform: scale(1.2);
+
+
+}
+
+
+.projectZone>section>div:nth-child(1)>img:hover{
+    border-radius: 30px;
+    transform: rotateX(30deg);
+    transition: 1s;
+}
+.projectZone>section>div:nth-child(2)>img:hover{
+    border-radius: 30px;
+    transform: rotateX(30deg);
+    transition: 1s;
+}
+.projectZone>section>div:nth-child(3)>img:hover{
+    border-radius: 30px;
+    transform: rotateX(30deg);
+    transition: 1s;
+}
+.git-button:hover{
+    transition: 1s;
+    transform: scale(1.2);
+
+}
+/*End Animation*/
