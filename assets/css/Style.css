@@ -97,10 +97,11 @@ body{
     left: 24.9%;
     top:63%;
     background: -webkit-linear-gradient(top, #FA981D,#894C00);
-    border: 2px solid gray;
+    cursor: pointer;
+    border: none;
     width: 214px;
     height: 57px;
-    border-radius: 10px;
+    border-radius: 45px;
     font-size: 30px;
 
 }
@@ -156,17 +157,36 @@ body{
     width: 58%;
     top: 37%;
     left: 39%;
-    background-color: #767272;
-    opacity: 60%;
+    background: rgba(118, 114, 114, 0.6);
+
     border-radius: 10px;
 }
-.square1{
+
+#dree{
     position: absolute;
-    left: 40%;
-    top: 39%;
+    top: 50%;
+    left: 2%;
+}
+#ul{
+
+    position: absolute;
+    top: 10%;
+}
+
+#ul{
+
+    position: absolute;
+    left: 2%;
+    top: 10%;
     background: none;
 }
+#ul2{
+    position: absolute;
+    top: 60%;
+    left: 2%;
+}
 .cvButton{
+    cursor: pointer;
     font-family: 'Inter', sans-serif;
     border-radius: 45px;
     position: absolute;
@@ -178,19 +198,19 @@ body{
     height: 30px;
     border: none;
 }
-.square2>ul{
+#kotuwa2>ul{
     background: none;
     position: absolute;
-    left: 39%;
-    top: 78%;
+    left: 0;
+    top: -25%
 
 }
 #kotuwa2{
     position: absolute;
     height: 10%;
     width: 58%;
-    background-color: #767272;
-    opacity: 60%;
+    background: rgba(118, 114, 114, 0.6);
+
     top: 80%;
     left: 39%;
     border-radius: 10px;
@@ -203,29 +223,30 @@ body{
     left: 40%;
     top: 29%;
 }
-
-.square1>h3{
+#kotuwa>h3{
+    position: absolute;
+    left: 2%;
     color: #CD9A5A;
     background: none;
     font-size: 35px;
 }
-.square1>ul{
+#kotuwa>ul{
     background: none;
 
 }
-.square1>ul>li{
+#kotuwa>ul>li{
     font-size: 28px;
     margin: 20px;
     background: none;
 }
 
 
-.square2>ul>li{
+#kotuwa2>ul>li{
     font-size: 28px;
     margin: 30px;
     background: none;
 }
-.square2>h3{
+#kotuwa2>h3{
     color: #CD9A5A;
     background: none;
     font-size: 35px;
@@ -314,13 +335,14 @@ body{
 
 
 /*Project Zone*/
-.projectZone>h1{
+.projectZone>div>h1{
     position: absolute;
-    top: 5%;
+    top: -3vh;
     left: 3%;
     font-weight: bold;
     background: none;
     font-size: 60px;
+
     margin-left: 4%;
     z-index: 2;
 }
@@ -330,8 +352,8 @@ body{
     left: 5%;
     width: 30%;
     height: 10%;
-    background-color: #767272;
-    opacity: 80%;
+    background: rgba(118, 114, 114, 0.8);
+
     border-radius: 45px;
 }
 .projectZone>section{
@@ -799,6 +821,12 @@ section{
     .hire-me{
         left: 23%;
     }
+
+    /*  Specification  */
+    #raumkotuwa{
+        height: 8vh;
+    }
+    /* End Specification  */
 }
 @media all and (max-width:1700px){
     /*  Specification  */
@@ -849,6 +877,7 @@ section{
 /*Project Zone */
         #raumkotuwa {
             top: 7.5%;
+            height: 6vh;
         }
         .projectZone>section{
             height: 63vh;
@@ -918,6 +947,7 @@ section{
     #raumkotuwa {
         top: 8.5%;
         left: 4.5%;
+        height: 8vh;
     }
     .projectZone>section{
         margin-left: 80px;
@@ -937,7 +967,9 @@ section{
         left: 4.5%;
         width: 37%;
     }
-
+    #raumkotuwa>h1 {
+     top: -49%;
+    }
     /*  End Project Zone     */
 }
 @media all and (max-width:1420px){
@@ -956,6 +988,9 @@ section{
         #raumkotuwa {
 
             width: 44%;
+        }
+        #raumkotuwa>h1 {
+            top: -67%;
         }
         .projectZone>section{
             height: 58vh;
@@ -1038,6 +1073,12 @@ section{
         background-position: left;
     }
 /* End of About Me*/
+/*Project Zone*/
+    #raumkotuwa>h1{
+        font-size: 50px;
+        top: -54%;
+    }
+/*  ENd PRoject Zone  */
 }
 @media all and (max-width:1280px){
 /*About Me*/
@@ -1100,7 +1141,9 @@ section{
         width: 42%;
         top: 9.5%;
     }
-
+    #raumkotuwa>h1{
+       top: -5vh;
+    }
     /*  End Project Zone     */
 
 /*  Form  */
@@ -1147,8 +1190,10 @@ section{
     }
     /*PRoject ZOne*/
     #raumkotuwa {
-
-        width: 59%;
+        width: 40%;
+    }
+    #raumkotuwa>h1 {
+        top: -4vh;
     }
     .projectZone>section>div>h4 {
         font-size: 25px;
@@ -1175,7 +1220,7 @@ section{
     /*PRoject ZOne*/
     #raumkotuwa {
 
-        width: 50%;
+        width: 43%;
     }
 /*  ENd Project Zone  */
 }
@@ -1394,7 +1439,12 @@ section{
 
     /*  Project Zone  */
     #raumkotuwa{
-        width: 49vw;
+        width: 43vw;
+        height: 6vh;
+
+    }
+    #raumkotuwa>h1{
+        font-size: 40px;
     }
     /*  ENd Project Zone  */
 }
@@ -1602,6 +1652,12 @@ section{
       width: 15vw;
     }
 /*  End Project Zone  */
+}
+@media all and (max-width: 633px){
+    #raumkotuwa>h1{
+        font-size: 30px;
+        top: -2vh;
+    }
 }
     @media all and (max-width: 650px){
         #gold{
@@ -2254,14 +2310,18 @@ section{
 /*End Home*/
 
 /*About Me*/
+
 .photo:hover{
     border-radius: 30px;
     transform: rotateY(30deg);
     transition: 1s;
+    cursor: pointer;
 }
+
 #kotuwa:hover{
     transition: 1s;
     background: rgba(0, 0, 0, 0.6);
+    cursor: pointer;
 }
 #kotuwa2:hover{
     transition: 1s;
@@ -2283,71 +2343,88 @@ section{
 #kotuwa3>div>div:nth-child(1):hover{
     transition: 1s;
     transform: scale(1.5);
+    cursor: pointer;
 
 }
 
 #kotuwa3>div>div:nth-child(2):hover{
     transition: 1s;
     transform: scale(1.5);
+    cursor: pointer;
 
 }
 #kotuwa3>div>div:nth-child(3):hover{
     transition: 1s;
     transform: scale(1.5);
+    cursor: pointer;
 
 }
 #kotuwa3>div>div:nth-child(4):hover{
     transition: 1s;
     transform: scale(1.5);
+    cursor: pointer;
 
 }
 
 #kotuwa4>div:nth-child(1):hover{
     transition: 1s;
     transform: scale(2);
+    cursor: pointer;
 
 }
 
 #kotuwa4>div:nth-child(2):hover{
     transition: 1s;
     transform: scale(2);
+    cursor: pointer;
 
 }
 #kotuwa4>div:nth-child(3):hover{
     transition: 1s;
     transform: scale(2);
+    cursor: pointer;
 
 }
 #kotuwa4>div:nth-child(4):hover{
     transition: 1s;
     transform: scale(2);
+    cursor: pointer;
 
 }
 #kotuwa4>div:nth-child(5):hover{
     transition: 1s;
     transform: scale(2);
+    cursor: pointer;
 
 }
 /*End Spesification */
 
-
+/*Project Zone*/
+#raumkotuwa:hover{
+    transition: 1s;
+    border-color: #FA981D;
+    border-radius: 0;
+    background: none;
+    cursor: pointer;
+}
 
 .projectZone>section>div:nth-child(1):hover{
     transition: 1s;
     transform: scale(1.2);
     perspective: 5000px;
+    cursor: pointer;
 
 }
 .projectZone>section>div:nth-child(2):hover{
     transition: 1s;
     transform: scale(1.2);
-
+    cursor: pointer;
 
 }
 .projectZone>section>div:nth-child(3):hover{
     transition: 1s;
     transform: scale(1.2);
-
+    cursor: pointer;
 
 }
 
