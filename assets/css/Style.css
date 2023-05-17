@@ -2478,13 +2478,15 @@ section{
 .projectZone>section>div:nth-child(2):hover{
 
     transition: 1s;
-    transform: scale(1.2);
+    rotate: 5deg;
+    perspective: 5000px;
     cursor: pointer;
 
 }
 .projectZone>section>div:nth-child(3):hover{
     transition: 1s;
-    transform: scale(1.2);
+    rotate: 5deg;
+    perspective: 5000px;
     cursor: pointer;
 
 }
@@ -2504,6 +2506,7 @@ section{
     border-radius: 30px;
     transform: rotateX(30deg);
     transition: 1s;
+
 }
 .git-button:hover{
     transition: 1s;
