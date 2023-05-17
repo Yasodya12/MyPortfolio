@@ -2341,12 +2341,13 @@ section{
 /*Animation*/
 
 /*Home*/
-
+#gold:hover{
+    transition: 2s;
+    rotate: 360deg;
+}
 .hire-me:hover{
-    transition: 1s;
-
-    border-radius: 10px;
-    background: black;
+    transition: 4s;
+    background: linear-gradient(180deg, #000000 0%, #894C00 100%);
 }
 
 #twitter:hover{
@@ -2426,32 +2427,33 @@ section{
 
 #kotuwa4>div:nth-child(1):hover{
     transition: 1s;
-    transform: scale(2);
+    rotate: 15deg;
+
     cursor: pointer;
 
 }
 
 #kotuwa4>div:nth-child(2):hover{
     transition: 1s;
-    transform: scale(2);
+    rotate: 15deg;
     cursor: pointer;
 
 }
 #kotuwa4>div:nth-child(3):hover{
     transition: 1s;
-    transform: scale(2);
+    rotate: 15deg;
     cursor: pointer;
 
 }
 #kotuwa4>div:nth-child(4):hover{
     transition: 1s;
-    transform: scale(2);
+    rotate: 15deg;
     cursor: pointer;
 
 }
 #kotuwa4>div:nth-child(5):hover{
     transition: 1s;
-    transform: scale(2);
+    rotate: 15deg;
     cursor: pointer;
 
 }
@@ -2468,12 +2470,13 @@ section{
 
 .projectZone>section>div:nth-child(1):hover{
     transition: 1s;
-    transform: scale(1.2);
+    rotate: 5deg;
     perspective: 5000px;
     cursor: pointer;
 
 }
 .projectZone>section>div:nth-child(2):hover{
+
     transition: 1s;
     transform: scale(1.2);
     cursor: pointer;
