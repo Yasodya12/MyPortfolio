@@ -2111,7 +2111,20 @@ section{
     /*    ENd of Abount ME*/
 
     /*Specification*/
+    #kotuwa3{
+        height: 30vh;
+    }
+    #kotuwa3>div{
+        margin-top: 50%;
+    }
     #kotuwa3>div>h4{
+        font-size: 10px;
+    }
+    #kotuwa3>div>p{
+        font-size: 5px;
+    }
+    #kotuwa3>div>img{
+        height: 30%;
 
     }
     #kotuwa4{
@@ -2416,6 +2429,30 @@ section{
         font-size: 10px;
     }
 /* End of About Me   */
+/*  Spesification  */
+    .specifation>h2{
+        font-size: 25px;
+    }
+    .specifation>h1{
+        font-size: 25px;
+        top: 65vh;
+    }
+    #kotuwa3>div>h4{
+        font-size: 7px;
+        height: 20%;
+    }
+/* End Spesification  */
+
+/*  Project Zone  */
+    #raumkotuwa>h1 {
+        font-size: 25px;
+
+    }
+    #raumkotuwa{
+        height: 6vh;
+    }
+/* End Project Zone  */
+
 /*  Form  */
     .socials>a {
         background: none;
