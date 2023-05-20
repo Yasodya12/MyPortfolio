@@ -342,27 +342,9 @@ body::-webkit-scrollbar{
     margin-left: 4%;
     background: none;
 }
-#kotuwa3>div{
-    display: flex;
-    position: absolute;
-    left: 1vw;
-    top: 9vh;
 
-    column-gap: 5vw;
-    width: 18%;
-    background: none;
-}
-#kotuwa3>div>div>p{
-    background: none;
-}
-#kotuwa3>div>div>h4{
-    background: none;
-}
-#kotuwa3>div>div{
-    background: none;
-    margin-left: 100px;
 
-}
+
 
 #kotuwa4{
     position: absolute;
@@ -382,8 +364,25 @@ body::-webkit-scrollbar{
     left: 8%;
     top: -80%;
     background-color: rgb(118, 114, 114, 0.6);
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     border-radius: 10px;
+}
+#kotuwa3>div>p{
+    background: none;
+    width: 50%;
+}
+#kotuwa3>div>h4{
+    background: none;
+    width: 80%;
+}
+#kotuwa3>div{
+    margin-top: 20%;
+    background: none;
+    margin-left: 30%;
+    height: 80%;
+
+
 }
 
 /*End of Sepefication*/
@@ -412,11 +411,15 @@ body::-webkit-scrollbar{
     border-radius: 45px;
 }
 .projectZone>section{
+    width: 80%;
     position: absolute;
     top:27%;
-    display: flex;
-    margin-right: 150px;
-    margin-left: 100px;
+    left:0;
+    right: 0;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+
     background: none;
     /*justify-content: ;*/
 
@@ -1183,9 +1186,11 @@ section{
         margin-bottom: 1vh;
     }
     #kotuwa3>div{
-        column-gap: 1vw;
-        left: -2vw;
-        top: 6vh;
+        margin-top: 15%;
+       height: 90%;
+    }
+    #kotuwa3>div>p{
+        width: 80%;
     }
 /*  End Specification  */
 
@@ -1336,10 +1341,14 @@ section{
         top: -77%;
     }
     #kotuwa3>div{
-        left: 0;
-    }
-    #kotuwa3>div>div>p{
 
+        margin-left: 19%;
+    }
+    #kotuwa3>div>h4{
+        font-size: 15px;
+    }
+    #kotuwa3>div>p{
+        font-size: 10px;
         margin-top: 10px;
     }
 
@@ -1475,6 +1484,21 @@ section{
     }
 }
 @media all and (max-width: 912px){
+
+    /*Specification*/
+    #kotuwa3{
+        height: 30vh;
+    }
+    #kotuwa3>div{
+        margin-top: 25%;
+    }
+        #kotuwa3>div>h4{
+            font-size: 20px;
+        }
+    #kotuwa3>div>p{
+        font-size: 15px;
+    }
+    /*End Speficication*/
     #kotuwa2>ul {
         position: absolute;
         top: -11%;
@@ -1586,6 +1610,20 @@ section{
 
 /*  End of About Me */
 
+/*  Specification  */
+    #kotuwa3{
+        height: 30vh;
+    }
+    #kotuwa3>div{
+        margin-top: 25%;
+    }
+    #kotuwa3>div>h4{
+        font-size: 20px;
+    }
+    #kotuwa3>div>p{
+        font-size: 15px;
+    }
+/*  End Specification  */
 
 /*  Form  */
     .form>section>h1 {
@@ -1670,6 +1708,9 @@ section{
 @media all and (max-width: 780px){
     #kotuwa>h3 {
         font-size: 25px;
+    }
+    #kotuwa3>div{
+        margin-left: 12%;
     }
 
 }
@@ -1909,6 +1950,15 @@ section{
     }
     /*  ENd of Aboubt Me  */
 
+/*  Specification  */
+    #kotuwa3>div>h4{
+        font-size: 15px;
+    }
+    #kotuwa3>div>p{
+        font-size: 10px;
+    }
+/* End Specification  */
+
 /*  Project ZOne  */
     #raumkotuwa{
         width: 64vw;
@@ -2061,6 +2111,9 @@ section{
     /*    ENd of Abount ME*/
 
     /*Specification*/
+    #kotuwa3>div>h4{
+
+    }
     #kotuwa4{
         height: 8%;
     }
