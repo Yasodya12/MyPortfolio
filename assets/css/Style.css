@@ -2,11 +2,25 @@
 *{
     font-family: 'Inter', sans-serif;
     background-color: black;
+
 }
 body{
     height: 100vh;
     background-color: black;
+
+    overflow-y: scroll;
 }
+body::-webkit-scrollbar{
+    display: none;
+}
+@keyframes gold {
+    from{
+        scale: 0;
+    }to{
+        scale: 1;
+         }
+}
+
 #gold{
     position: absolute;
     width: 20%;
@@ -14,8 +28,23 @@ body{
     left: -1%;
     top: 2%;
     background: none;
+
+}
+@keyframes vama {
+    from{
+        left: 0;
+
+    }
+    to{
+        left: 24.9%
+    }
+}
+.vama{
+    background: none;
+    animation: gold 2s;
 }
 #logo {
+    animation: gold 2s;
     position: absolute;
     width: 21.1798152%;
     height: 45.078125%;
@@ -25,7 +54,19 @@ body{
 
     z-index: 2;
 }
+@keyframes ira {
+    from{
+        width: 0;
+    }to{
+        width: 23%;
+         }
+}
+
+{
+
+}
 #ira{
+    animation: ira 2s;
     position: absolute;
     height: 0.5%;
     width: 23%;
@@ -58,6 +99,14 @@ body{
 .home>h1>.topic{
     color: #FA981D;
 }
+@keyframes hellow {
+    from{
+        top: 0;
+    }to{
+         left: 24.9%;
+     }
+
+}
 .home>h3{
     font-family: 'Inter', sans-serif;
     background: none;
@@ -68,6 +117,7 @@ body{
     font-size: 40px;
     font-weight: bold;
     z-index: 2;
+    animation: hellow 2s;
 }
 .home>h6{
     font-family: 'Inter', sans-serif;
@@ -104,6 +154,11 @@ body{
     border-radius: 45px;
     font-size: 30px;
 
+
+}
+.hire-me:active{
+    scale: 0.9;
+    transition: 0.2s;
 }
 /*End of Home*/
 
@@ -1241,10 +1296,21 @@ section{
 
 }
 @media all and (max-width:1024px){
+    #kotuwa>h3 {
+        position: absolute;
+
+        font-size: 30px;
+    }
+    #kotuwa>ul>li {
+        font-size: 20px;
+    }
 
     #kotuwa2{
         height: 15%;
 
+    }
+    #kotuwa2>ul>li {
+        font-size: 20px;
     }
 
 /*   Specification */
@@ -1409,6 +1475,12 @@ section{
     }
 }
 @media all and (max-width: 912px){
+    #kotuwa2>ul {
+        position: absolute;
+        top: -11%;
+        width: 100%;
+        font-size: 25px;
+    }
 
     .form>section>h1 {
         font-size: 48px;
@@ -1416,7 +1488,7 @@ section{
         top: 5%;
     }
     .form>section>address>a:nth-child(1) {
-        left: 5%;
+        left: 15%;
         top: 30%;
     }
     #number {
@@ -1547,11 +1619,7 @@ section{
         left: 21%;
         top: 69%;
     }
-    .form>section>h5 {
-        top: 58%;
-        left: 15%;
-        font-size: 40px;
-    }
+
     .socials{
         top: 154%;
         left: 59%;
@@ -1559,8 +1627,9 @@ section{
     }
     .form>section>h5{
         left: -2vw;
-        top: 55vh;
+        top: 58vh;
         width: 100vw;
+        font-size: 40px;
     }
     .form>form {
         left: 12%;
@@ -1931,19 +2000,19 @@ section{
         font-size: 20px;
     }
     #kotuwa{
-        height: 27%;
+        height: 22%;
     }
 
 
     .cvButton {
-        top: 92%;
+        top: 61%;
         left: 68%;
         height: 25px;
         width: 100px;
         font-size: 10px;
     }
     #kotuwa2{
-        height: 13%;
+        height: 9%;
         width: 95vw;
         top: 84%;
         left: 2%;
@@ -2123,7 +2192,7 @@ section{
     #he{
         font-size: 15px;
     }
-    .square1>ul>li {
+    #kotuwa>ul>li {
         font-size: 10px;
     }
     #dree{
@@ -2145,16 +2214,15 @@ section{
     .cvButton{
         font-size: 10px;
     }
-    .square2>ul>li {
+    #kotuwa2>ul>li {
         font-size: 10px;
-
     }
     #kotuwa2{
         top: 78%;
         height: 8%;
     }
     .cvButton{
-        top: 82%;
+        top: 56%;
         left: 65%;
         height: 20px;
         width: 100px;
@@ -2242,14 +2310,13 @@ section{
     #exp{
         top: 76%;
     }
-    .square2>ul{
-        top: 79%;
-    }
+
     #kotuwa2{
+        height: 9%;
         top: 82%;
     }
     .cvButton{
-        top: 69%;
+        top: 60%;
         left: 68%;
     }
 /*   End abt Me */
@@ -2281,6 +2348,13 @@ section{
     }
     #kotuwa>h3{
         font-size: 15px;
+    }
+    #kotuwa2>ul {
+        position: absolute;
+        left: -6%;
+        top: -34%;
+        width: 100%;
+        font-size: 25px;
     }
     #kotuwa2>ul>li {
         font-size: 10px;
@@ -2345,10 +2419,7 @@ section{
     transition: 2s;
     rotate: 360deg;
 }
-.hire-me:hover{
-    transition: 4s;
-    background: linear-gradient(180deg, #000000 0%, #894C00 100%);
-}
+
 
 #twitter:hover{
     transition: 1s;
@@ -2366,6 +2437,9 @@ section{
     transition: 1s;
     transform: scale(2);
 }
+
+
+
 /*End Home*/
 
 /*About Me*/
@@ -2377,6 +2451,12 @@ section{
     cursor: pointer;
 }
 
+#kotuwa:not(:hover){
+
+    transition: 1s;
+    background-color: rgb(118, 114, 114, 0.6);
+    cursor: pointer;
+}
 #kotuwa:hover{
     transition: 1s;
     background: rgba(0, 0, 0, 0.6);
@@ -2386,6 +2466,12 @@ section{
     transition: 1s;
     background: rgba(0, 0, 0, 0.6);
 }
+#kotuwa2:not(:hover){
+
+    transition: 1s;
+    background-color: rgb(118, 114, 114, 0.6);
+    cursor: pointer;
+}
 /*End About Me*/
 
 /* Spesification */
@@ -2394,9 +2480,21 @@ section{
     transition: 1s;
     background: rgba(0, 0, 0, 0.6);
 }
+#kotuwa4:not(:hover){
+
+    transition: 1s;
+    background-color: rgb(118, 114, 114, 0.6);
+    cursor: pointer;
+}
 #kotuwa3:hover{
     transition: 1s;
     background: rgba(0, 0, 0, 0.6);
+}
+#kotuwa3:not(:hover){
+
+    transition: 1s;
+    background-color: rgb(118, 114, 114, 0.6);
+    cursor: pointer;
 }
 
 #kotuwa3>div>div:nth-child(1):hover{
@@ -2405,12 +2503,19 @@ section{
     cursor: pointer;
 
 }
-
+#kotuwa3>div>div:nth-child(1):not(:hover){
+    transition: 1s;
+    transform: scale(1);
+}
 #kotuwa3>div>div:nth-child(2):hover{
     transition: 1s;
     transform: scale(1.5);
     cursor: pointer;
 
+}
+#kotuwa3>div>div:nth-child(2):not(:hover) {
+    transition: 1s;
+    transform: scale(1);
 }
 #kotuwa3>div>div:nth-child(3):hover{
     transition: 1s;
@@ -2418,11 +2523,19 @@ section{
     cursor: pointer;
 
 }
+#kotuwa3>div>div:nth-child(3):not(:hover) {
+    transition: 1s;
+    transform: scale(1);
+}
 #kotuwa3>div>div:nth-child(4):hover{
     transition: 1s;
     transform: scale(1.5);
     cursor: pointer;
 
+}
+#kotuwa3>div>div:nth-child(4):not(:hover) {
+    transition: 1s;
+    transform: scale(1);
 }
 
 #kotuwa4>div:nth-child(1):hover{
@@ -2432,11 +2545,22 @@ section{
     cursor: pointer;
 
 }
+#kotuwa4>div:nth-child(1):not(:hover){
+    transition: 1s;
+    rotate: 0deg;
 
+
+}
 #kotuwa4>div:nth-child(2):hover{
     transition: 1s;
     rotate: 15deg;
     cursor: pointer;
+
+}
+#kotuwa4>div:nth-child(2):not(:hover){
+    transition: 1s;
+    rotate: 0deg;
+
 
 }
 #kotuwa4>div:nth-child(3):hover{
@@ -2445,16 +2569,34 @@ section{
     cursor: pointer;
 
 }
+#kotuwa4>div:nth-child(3):not(:hover){
+    transition: 1s;
+    rotate: 0deg;
+
+
+}
 #kotuwa4>div:nth-child(4):hover{
     transition: 1s;
     rotate: 15deg;
     cursor: pointer;
 
 }
+#kotuwa4>div:nth-child(4):not(:hover){
+    transition: 1s;
+    rotate: 0deg;
+
+
+}
 #kotuwa4>div:nth-child(5):hover{
     transition: 1s;
     rotate: 15deg;
     cursor: pointer;
+
+}
+#kotuwa4>div:nth-child(5):not(:hover){
+    transition: 1s;
+    rotate: 0deg;
+
 
 }
 /*End Spesification */
@@ -2467,12 +2609,25 @@ section{
     background: none;
     cursor: pointer;
 }
+#raumkotuwa:not(:hover){
+    transition: 1s;
+    border-color: #FA981D;
+
+
+}
 
 .projectZone>section>div:nth-child(1):hover{
     transition: 1s;
     rotate: 5deg;
     perspective: 5000px;
     cursor: pointer;
+
+}
+.projectZone>section>div:nth-child(1):not(:hover){
+    transition: 1s;
+    rotate: 0deg;
+    perspective: 0;
+
 
 }
 .projectZone>section>div:nth-child(2):hover{
@@ -2483,6 +2638,13 @@ section{
     cursor: pointer;
 
 }
+.projectZone>section>div:nth-child(2):not(:hover){
+    transition: 1s;
+    rotate: 0deg;
+    perspective: 0;
+
+
+}
 .projectZone>section>div:nth-child(3):hover{
     transition: 1s;
     rotate: 5deg;
@@ -2490,16 +2652,32 @@ section{
     cursor: pointer;
 
 }
+.projectZone>section>div:nth-child(3):not(:hover){
+    transition: 1s;
+    rotate: 0deg;
+    perspective: 0;
 
+
+}
 
 .projectZone>section>div:nth-child(1)>img:hover{
     border-radius: 30px;
     transform: rotateX(30deg);
     transition: 1s;
 }
+.projectZone>section>div:nth-child(1)>img:not(:hover){
+    border-radius: 0;
+    transform: rotateX(0deg);
+    transition: 1s;
+}
 .projectZone>section>div:nth-child(2)>img:hover{
     border-radius: 30px;
     transform: rotateX(30deg);
+    transition: 1s;
+}
+.projectZone>section>div:nth-child(2)>img:not(:hover){
+    border-radius: 0;
+    transform: rotateX(0deg);
     transition: 1s;
 }
 .projectZone>section>div:nth-child(3)>img:hover{
@@ -2508,9 +2686,19 @@ section{
     transition: 1s;
 
 }
+.projectZone>section>div:nth-child(3)>img:not(:hover){
+    border-radius: 0;
+    transform: rotateX(0deg);
+    transition: 1s;
+}
 .git-button:hover{
     transition: 1s;
     transform: scale(1.2);
+
+}
+.git-button:not(:hover){
+    transition: 1s;
+    transform: scale(1);
 
 }
 /*End Animation*/
