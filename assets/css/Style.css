@@ -1191,6 +1191,7 @@ section{
     }
     #kotuwa3>div>p{
         width: 80%;
+
     }
 /*  End Specification  */
 
@@ -2430,6 +2431,12 @@ section{
     }
 /* End of About Me   */
 /*  Spesification  */
+
+    #kotuwa3>div {
+        margin-left: 15%;
+        margin-right: 15%;
+
+    }
     .specifation>h2{
         font-size: 25px;
     }
@@ -2438,7 +2445,14 @@ section{
         top: 65vh;
     }
     #kotuwa3>div>h4{
-        font-size: 7px;
+        line-height: 10px;
+        font-size: 8px;
+        height: 20%;
+    }
+    #kotuwa3>div>p{
+
+        margin-top: 0;
+        font-size: 6px;
         height: 20%;
     }
 /* End Spesification  */
@@ -2450,6 +2464,31 @@ section{
     }
     #raumkotuwa{
         height: 6vh;
+    }
+
+    .projectZone>section>div>img{
+        width: 30vw;
+        height: 10vh;
+    }
+    .projectZone>section>div>h4{
+        font-size: 15px;
+        margin: 0;
+        margin-top: 2vh;
+    }
+    .projectZone>section>div>p{
+        font-size: 10px;
+        margin: 0;
+        margin-top: 2vh;
+    }
+    .git-button{
+        margin-top: 1vh;
+        width: 25vw;
+        font-size: 10px;
+    }
+    .projectZone>section{
+        left: 0;
+        right: 0;
+        margin: auto;
     }
 /* End Project Zone  */
 
