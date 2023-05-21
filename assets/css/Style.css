@@ -2119,10 +2119,10 @@ section{
         margin-top: 50%;
     }
     #kotuwa3>div>h4{
-        font-size: 10px;
+        font-size: 11px;
     }
     #kotuwa3>div>p{
-        font-size: 5px;
+        font-size: 8px;
     }
     #kotuwa3>div>img{
         height: 30%;
@@ -2135,11 +2135,28 @@ section{
 
     /*  Project ZOne  */
     #raumkotuwa{
-        width: 85vw;
+        width: 67vw;
+        height: 5vh;
     }
     .projectZone>section{
-        margin-left: 29px;
+
+        left: 0;
+        right: 0;
+        margin: auto;
         height: 30vh;
+    }
+    .projectZone>section>div>img{
+        height: 15vh;
+        width: 30vw;
+    }
+    .projectZone>section>div>h4{
+        font-size: 20px;
+    }
+    .projectZone>section>div>p{
+        font-size: 14px;
+    }
+    .git-button{
+        width: 18vw;
     }
     /* End Project ZOne  */
 
@@ -2299,6 +2316,15 @@ section{
         top: 76%;
     }
     /*End of Abount Me*/
+
+    /*Project Zone*/
+    .projectZone>section>div>h4 {
+        font-size: 18px;
+    }
+    .projectZone>section>div>p {
+        font-size: 12px;
+    }
+    /*End Project Zone*/
 
     /*Form*/
     .form>section>h1 {
