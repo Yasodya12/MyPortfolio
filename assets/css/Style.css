@@ -2706,43 +2706,43 @@ section{
     cursor: pointer;
 }
 
-#kotuwa3>div>div:nth-child(1):hover{
+#kotuwa3>div:nth-child(1):hover{
     transition: 1s;
-    transform: scale(1.5);
+    transform: scale(1.4);
     cursor: pointer;
 
 }
-#kotuwa3>div>div:nth-child(1):not(:hover){
+#kotuwa3>div:nth-child(1):not(:hover){
     transition: 1s;
     transform: scale(1);
 }
-#kotuwa3>div>div:nth-child(2):hover{
+#kotuwa3>div:nth-child(2):hover{
     transition: 1s;
-    transform: scale(1.5);
+    transform: scale(1.4);
     cursor: pointer;
 
 }
-#kotuwa3>div>div:nth-child(2):not(:hover) {
+#kotuwa3>div:nth-child(2):not(:hover) {
     transition: 1s;
     transform: scale(1);
 }
-#kotuwa3>div>div:nth-child(3):hover{
+#kotuwa3>div:nth-child(3):hover{
     transition: 1s;
-    transform: scale(1.5);
+    transform: scale(1.4);
     cursor: pointer;
 
 }
-#kotuwa3>div>div:nth-child(3):not(:hover) {
+#kotuwa3>div:nth-child(3):not(:hover) {
     transition: 1s;
     transform: scale(1);
 }
-#kotuwa3>div>div:nth-child(4):hover{
+#kotuwa3>div:nth-child(4):hover{
     transition: 1s;
-    transform: scale(1.5);
+    transform: scale(1.4);
     cursor: pointer;
 
 }
-#kotuwa3>div>div:nth-child(4):not(:hover) {
+#kotuwa3>div:nth-child(4):not(:hover) {
     transition: 1s;
     transform: scale(1);
 }
