@@ -1500,6 +1500,27 @@ section{
         font-size: 15px;
     }
     /*End Speficication*/
+
+    /*Project Zone*/
+    #raumkotuwa>h1 {
+        font-size: 49px;
+        top: -40%;
+        left: -1%;
+    }
+    #raumkotuwa{
+        height: 5vh;
+    }
+    .projectZone>section>div>img {
+        height: 30vh;
+        width: 30vw;
+    }
+    .projectZone>section{
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+    /*End Project Zone*/
+
     #kotuwa2>ul {
         position: absolute;
         top: -11%;
@@ -1625,6 +1646,15 @@ section{
         font-size: 15px;
     }
 /*  End Specification  */
+
+/*  Project Zone  */
+    #raumkotuwa>h1{
+        top: -2vh;
+    }
+    .projectZone>section>div>img{
+        height: 25vh;
+    }
+/*End  Project Zone  */
 
 /*  Form  */
     .form>section>h1 {
