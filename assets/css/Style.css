@@ -422,9 +422,33 @@ body::-webkit-scrollbar{
 
     background: none;
     /*justify-content: ;*/
-
+}
+#assiments{
+    left: 0;
+    right: 0;
+    margin: auto;
+    position: absolute;
+   border: none;
+    background-color: black;
+    top: 60vh;
+    border-radius: 45px;
+    width: 10vw;
+    animation: assigment 0.5s;
+    height: 28px;
 }
 
+ #assiments:hover {
+   border:2px solid white;
+     transition: 1s;
+     transform: scale(1.2);
+     cursor: pointer;
+
+}
+#assiments:not(:hover){
+border: none;
+    transform: scale(1);
+    transition: 1s;
+}
 .projectZone{
     position: relative;
 
