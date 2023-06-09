@@ -117,28 +117,28 @@
 
                     <div >
                         <label  class="form-label">Item ID</label>
-                        <input type="text" class="form-control" id="itemID" aria-describedby="emailHelp">
+                        <input id="txtItemID" type="text" class="form-control" id="itemID" aria-describedby="emailHelp">
                     </div>
 
                     <div >
                         <label  class="form-label">Item Name</label>
-                        <input type="text" class="form-control"aria-describedby="emailHelp">
+                        <input id="txtItemName" type="text" class="form-control"aria-describedby="emailHelp">
                     </div>
 
                     <div >
                         <label  class="form-label">Unit Price</label>
-                        <input type="text" class="form-control"  aria-describedby="emailHelp">
+                        <input id="txtPrice" type="text" class="form-control"  aria-describedby="emailHelp">
                     </div>
 
                     <div >
                         <label  class="form-label">Quantity</label>
-                        <input type="text" class="form-control" aria-describedby="emailHelp">
+                        <input id="txtQty" type="text" class="form-control" aria-describedby="emailHelp">
                     </div>
 
                     <div>
-                        <button type="submit" class="btn btn-primary ">Add</button>
-                        <button type="submit" class="btn btn-primary bg-success">Update</button>
-                        <button type="submit" class="btn btn-primary bg-danger">Delete</button>
+                        <button id="btnItemAdd" type="submit" class="btn btn-primary ">Add</button>
+                        <button id="btnItemUpdate" type="submit" class="btn btn-primary bg-success">Update</button>
+                        <button id="btnItemDelete" type="submit" class="btn btn-primary bg-danger">Delete</button>
                     </div>
                 </div>
 
@@ -159,7 +159,7 @@
             </section>
 
             <section >
-                <table class="table table-striped table-hover">
+                <table id="itemTable" class="table table-striped table-hover">
                     <thead class="bg-warning bg-opacity-75">
                     <tr>
                         <th scope="col">Customer-ID</th>
@@ -168,7 +168,7 @@
                         <th scope="col">Contact</th>
                     </tr>
                     </thead>
-                    <tbody>
+                    <tbody >
                     <tr>
                         <th scope="row">1</th>
                         <td>Mark</td>
@@ -406,6 +406,34 @@
            cutomerList.splice(findIndex,1);
            console.log(cutomerList);
         });
+
+
+
+    //Item JS Part
+
+        $('#btnItemAdd').click(function (event){
+
+            let itemId=$('#txtItemID').val();
+            let itemName=$('#txtItemName').val();
+            let itemPrice=$('#txtPrice').val();
+            let itemQty=$('#txtQty').val();
+            let table = document.getElementById("itemTable");
+            var row = table.insertRow(table.rows.length);
+
+            let cell1 = row.insertCell(0);
+            let cell2 = row.insertCell(1);
+            let cell3 = row.insertCell(2);
+            let cell4 = row.insertCell(3);
+            cell1.innerHTML=itemId;
+            cell2.innerHTML=itemName;
+            cell3.innerHTML=itemPrice;
+            cell4.innerHTML=itemQty;
+
+
+
+        });
+
+
     </script>
 </body>
 </html>
