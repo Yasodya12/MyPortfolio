@@ -410,14 +410,17 @@
 
 
     //Item JS Part
-
+        let itemList=[];
+        let selectedRowItem;
+        let itemIndex;
+        let table;
         $('#btnItemAdd').click(function (event){
 
             let itemId=$('#txtItemID').val();
             let itemName=$('#txtItemName').val();
             let itemPrice=$('#txtPrice').val();
             let itemQty=$('#txtQty').val();
-            let table = document.getElementById("itemTable");
+            table = document.getElementById("itemTable");
             var row = table.insertRow(table.rows.length);
 
             let cell1 = row.insertCell(0);
@@ -429,11 +432,47 @@
             cell3.innerHTML=itemPrice;
             cell4.innerHTML=itemQty;
 
-
+            itemList.push({id:itemId, name:itemName, price:itemPrice, qty:itemQty});
+            console.log(itemList)
 
         });
 
 
+        $("#itemTable").dblclick(function (event){
+           selectedRowItem= event.target.closest("tr");
+          itemIndex= itemList.findIndex(itemList => itemList.id === selectedRowItem.cells[0].textContent);
+
+            $('#txtItemID').val(selectedRowItem.cells[0].textContent);
+            $('#txtItemName').val(selectedRowItem.cells[1].textContent);
+            $('#txtPrice').val(selectedRowItem.cells[2].textContent);
+            $('#txtQty').val(selectedRowItem.cells[3].textContent);
+
+        });
+        $("#btnItemUpdate").click(function (event){
+            let itemId=$('#txtItemID').val();
+            let itemName=$('#txtItemName').val();
+            let itemPrice=$('#txtPrice').val();
+            let itemQty=$('#txtQty').val();
+
+            console.log(itemId,itemName,itemPrice,itemQty, itemIndex);
+
+            itemList[itemIndex].id=itemId;
+            itemList[itemIndex].name=itemName;
+            itemList[itemIndex].price=itemPrice;
+            itemList[itemIndex].qty=itemQty;
+
+            selectedRowItem.cells[0].textContent=itemId;
+            selectedRowItem.cells[1].textContent=itemName;
+            selectedRowItem.cells[2].textContent=itemPrice;
+            selectedRowItem.cells[3].textContent=itemQty;
+        });
+
+        $("#btnItemDelete").click(function (event){
+            itemList.pop(itemIndex,1);
+            console.log(itemList);
+            console.log(selectedRowItem);
+            selectedRowItem.remove();
+        });
     </script>
 </body>
 </html>
