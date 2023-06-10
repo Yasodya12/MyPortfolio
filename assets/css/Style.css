@@ -476,7 +476,17 @@ body::-webkit-scrollbar{
     animation: assigment 0.5s;
     height: 28px;
 }
+#assimentButton{
+    position: absolute;
+    left: 30vw;
+    top: 67vh;
+    border-radius: 20px;
+    width: 200px;
 
+    height: 30px;
+    border: 2px solid white;
+
+}
  #assiments:hover {
    border:2px solid white;
      transition: 1s;
