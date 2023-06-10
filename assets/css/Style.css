@@ -16,8 +16,10 @@ body::-webkit-scrollbar{
 @keyframes gold {
     from{
         scale: 0;
+        rotate: 0;
     }to{
-        scale: 1;
+    scale: 1;
+    rotate: 360deg;
          }
 }
 
@@ -28,7 +30,7 @@ body::-webkit-scrollbar{
     left: -1%;
     top: 2%;
     background: none;
-
+    animation: gold 2s;
 }
 @keyframes vama {
     from{
@@ -43,8 +45,17 @@ body::-webkit-scrollbar{
     background: none;
     animation: gold 2s;
 }
+
+@keyframes logo {
+    from{
+        scale: 0;
+    }to{
+         scale: 1;
+     }
+}
+
 #logo {
-    animation: gold 2s;
+    animation: logo 2s;
     position: absolute;
     width: 21.1798152%;
     height: 45.078125%;
@@ -102,8 +113,10 @@ body::-webkit-scrollbar{
 @keyframes hellow {
     from{
         top: 0;
+        scale: 0;
     }to{
          left: 24.9%;
+             scale: 1;
      }
 
 }
@@ -119,6 +132,15 @@ body::-webkit-scrollbar{
     z-index: 2;
     animation: hellow 2s;
 }
+@keyframes boruwa  {
+    from{
+        top: 100vh;
+        scale: 0;
+    }to{
+         top: 51%;
+         scale: 1;
+     }
+}
 .home>h6{
     font-family: 'Inter', sans-serif;
     background: none;
@@ -127,6 +149,7 @@ body::-webkit-scrollbar{
     top:53%;
     font-size: 30px;
     font-weight: bold;
+    animation: boruwa 2s;
 }
 .so{
     position: absolute;
@@ -141,6 +164,13 @@ body::-webkit-scrollbar{
     width: 45%;
     background: none;
 }
+@keyframes hireMe {
+    from{
+    scale: 0;
+    }to{
+    scale: 1;
+         }
+}
 .hire-me{
     font-family: 'Inter', sans-serif;
     position: absolute;
@@ -153,7 +183,7 @@ body::-webkit-scrollbar{
     height: 57px;
     border-radius: 45px;
     font-size: 30px;
-
+    animation: hireMe 2s;
 
 }
 .hire-me:active{
@@ -168,7 +198,15 @@ body::-webkit-scrollbar{
 .aboutMe{
     position: relative;
 }
+@keyframes lokuwenaeka  {
+    from{
 
+        scale: 0;
+    }to{
+
+         scale: 1;
+     }
+}
 .aboutMe>section>h2{
     font-family: 'Inter', sans-serif;
     position: absolute;
@@ -176,8 +214,10 @@ body::-webkit-scrollbar{
     top:4%;
     background: none;
     font-size: 65px;
+
 }
 #p1{
+    animation: lokuwenaeka 2s;
     font-family: 'Inter', sans-serif;
     position: absolute;
     font-size: 35px;
