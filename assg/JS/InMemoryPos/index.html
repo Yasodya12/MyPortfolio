@@ -203,7 +203,7 @@
                 <div class="col">
                     <div class="input-group">
                         <span class="input-group-text">CustomerID</span>
-                        <select id="custIds" class="form-select" aria-label="Default select example">
+                        <select id="custIds" onchange="getSelectedCustID()" class="form-select" aria-label="Default select example">
                             <option selected disabled hidden>Customer ID</option>
 
                         </select>
@@ -212,7 +212,7 @@
                 <div class="col">
                     <div class="input-group">
                         <span class="input-group-text">Customer Name</span>
-                        <input class="form-control" type="text" placeholder="" aria-label="Disabled input example" disabled>
+                        <input id="custNameRst" class="form-control" type="text" placeholder="" aria-label="Disabled input example" disabled>
                     </div>
                 </div>
 
@@ -222,7 +222,7 @@
                 <div class="col">
                     <div class="input-group">
                         <span class="input-group-text">Item ID</span>
-                        <select id="itemIds" class="form-select" aria-label="Default select example">
+                        <select id="itemIds" class="form-select" onchange="getSelectedItemID()" aria-label="Default select example">
                             <option selected disabled hidden>Item ID</option>
 
                         </select>
@@ -231,22 +231,22 @@
 
                 <div class="col">
                     <div class="input-group">
-                        <span class="input-group-text">Description</span>
-                        <input class="form-control" type="text" placeholder="" aria-label="Disabled input example" disabled>
+                        <span class="input-group-text">Item Name</span>
+                        <input id="custItemRst" class="form-control" type="text" placeholder="" aria-label="Disabled input example" disabled>
                     </div>
                 </div>
 
                 <div class="col">
                     <div class="input-group">
                         <span class="input-group-text">Qty On Hand</span>
-                        <input class="form-control" type="text" placeholder="" aria-label="Disabled input example" disabled>
+                        <input class="form-control" id="txtQytRst" type="text" placeholder="" aria-label="Disabled input example" disabled>
                     </div>
                 </div>
 
                 <div class="col">
                     <div class="input-group">
                         <span class="input-group-text">Unit Price</span>
-                        <input class="form-control" type="text" placeholder="" aria-label="Disabled input example" disabled>
+                        <input id="txtPriceRst" class="form-control" type="text" placeholder="" aria-label="Disabled input example" disabled>
                     </div>
                 </div>
 
@@ -485,7 +485,7 @@
         option.value=itemId;
         option.text = itemId;
         selectItemId.append(option);
-
+        console.log("Item Tika",itemList);
 
     });
 
@@ -530,22 +530,34 @@
 
 //    Place Order From
 
-    // for (let i = 0; i < cutomerList.length; i++) {
-    //     let option = document.createElement("option");
-    //     option.value = cutomerList[i].id;
-    //     option.text = myArray[i];
-    //     selectElement.appendChild(option);
-    // }
+    function getSelectedCustID() {
 
-    let selectItemId = document.getElementById("itemIds");
-    itemList.forEach(function(item) {
-        let option = document.createElement("option");
-        option.value=item.id;
-        option.text = item.id;
-        selectItemId.append(option)
+        var selectCustomerID = document.getElementById("custIds");
+        var selectedCustId = selectCustomerID.value;
+        cutomerList.forEach(function(customer) {
+            if (customer.id==selectedCustId){
+                $('#custNameRst').val(customer.name);
+            }
+        });
+    }
 
-    });
+    function getSelectedItemID() {
+        console.log("Call Una")
+        var selectItemID = document.getElementById("itemIds");
+        var selectedItemId = selectItemID.value;
+        itemList.forEach(function(item) {
+            if (item.id==selectedItemId){
+                $('#custItemRst').val(item.name);
+                console.log(item.name)
 
+                $('#txtPriceRst').val(item.price);
+
+                $('#txtQytRst').val(item.qty);
+
+            }
+            //225
+        });
+    }
 
 </script>
 </body>
