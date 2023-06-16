@@ -269,7 +269,7 @@
                 <div class="col">
                     <div class="input-group">
                         <span class="input-group-text">Quantity</span>
-                        <input id="txtQtyOd" class="form-control" type="text" placeholder="" aria-label="Disabled input example">
+                        <input id="txtQtyOd" class="form-control" type="number" placeholder="" aria-label="Disabled input example">
                     </div>
                 </div>
 
@@ -439,39 +439,13 @@
 
 
 
-        function checkIdCust(){
-            let val = $('#CustID').val();
-            let i=0;
-            cutomerList.forEach(function(customer) {
-                if (customer.id==val){
-                   i++;
-                }
-            });
-            if(i>0){
-                return false;
-            }
-            return true;
-        }
 
-    function checkIdItem(){
-        let val =$('#txtItemID').val();
-        let i=0;
-        itemList.forEach(function(customer) {
-            if (customer.id==val){
-                i++;
-            }
-        });
-        if(i>0){
-            return false;
-        }
-        return true;
-    }
 
     $("#btnCustSave111").click(function () {
-        if(checkIdCust()){
+
             custId=$('#CustID').val();
 
-            $('#txtItemName').style.borderColor="blue";
+
             let CustName=$('#CustName').val();
             let CustAddress=$('#CustAddress').val();
             let contact=$('#CustContact').val();
@@ -500,11 +474,7 @@
                 clearfeildCust();
                 incrementCusId(custId);
             }
-        }else {
-            alert("Id Already Exists");
-        }
-
-
+            console.log(cutomerList);
 
     });
     function clearfeildCust(){
