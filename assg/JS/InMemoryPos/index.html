@@ -62,7 +62,7 @@
 
                 <div >
                     <label  class="form-label">Customer ID</label>
-                    <input id="CustID" type="text" class="form-control" id="customerID" aria-describedby="emailHelp">
+                    <input id="CustID" disabled type="text" class="form-control" id="customerID" aria-describedby="emailHelp">
                 </div>
 
                 <div >
@@ -133,7 +133,7 @@
 
                 <div >
                     <label  class="form-label">Item ID</label>
-                    <input id="txtItemID" type="text" class="form-control" id="itemID" aria-describedby="emailHelp">
+                    <input id="txtItemID" type="text" disabled class="form-control" id="itemID" aria-describedby="emailHelp">
                 </div>
 
                 <div >
@@ -143,12 +143,12 @@
 
                 <div >
                     <label  class="form-label">Unit Price</label>
-                    <input id="txtPrice" type="text" class="form-control"  aria-describedby="emailHelp">
+                    <input id="txtPrice" type="number" class="form-control"  aria-describedby="emailHelp">
                 </div>
 
                 <div >
                     <label  class="form-label">Quantity</label>
-                    <input id="txtQty" type="text" class="form-control" aria-describedby="emailHelp">
+                    <input id="txtQty" type="number" class="form-control" aria-describedby="emailHelp">
                 </div>
 
                 <div>
@@ -335,21 +335,21 @@
                 <div class="col">
                     <div class="input-group">
                         <span class="input-group-text">Total-Rs:</span>
-                        <input class="form-control" type="text" placeholder="" aria-label="Disabled input example" disabled>
+                        <input id="txtTot" class="form-control" type="text" placeholder="" aria-label="Disabled input example" disabled>
                     </div>
                 </div>
 
                 <div class="col">
                     <div class="input-group">
                         <span class="input-group-text">Discount-Rs:</span>
-                        <input class="form-control" type="number" placeholder="" aria-label="Disabled input example">
+                        <input id="txtDiscount" class="form-control" type="number" placeholder="" aria-label="Disabled input example">
                     </div>
                 </div>
 
                 <div class="col">
                     <div class="input-group">
                         <span class="input-group-text">Sub Tot-Rs:</span>
-                        <input class="form-control" type="text" placeholder="" aria-label="Disabled input example" disabled>
+                        <input id="txtSubTot" class="form-control" type="text" placeholder="" aria-label="Disabled input example" disabled>
                     </div>
                 </div>
             </div>
@@ -365,11 +365,50 @@
 </section>
 <script>
 
+
+
+
     let cutomerList=[];
     let selectedTable;
     let findIndex;
     let buttonEdit;
     let buttonDelete;
+    let custId;
+    let itemD;
+
+    function incrementCusId(currentID) {
+        if (currentID==='C00-NaN'){
+            custId='C00-001';
+        }else {
+            let number =parseInt(currentID.slice(4), 10);
+            number++;
+            custId = "C00-" + number.toString().padStart(3, "0");
+            $('#CustID').val(custId);
+            console.log(custId);
+
+        }
+
+        console.log(custId);
+    }
+
+    function incrementItemId(currentID) {
+        if (currentID==='I00-NaN'){
+            itemD='I00-001';
+        }else {
+            let number =parseInt(currentID.slice(4), 10);
+            number++;
+            itemD = "I00-" + number.toString().padStart(3, "0");
+            $('#txtItemID').val(itemD);
+            console.log(itemD);
+
+        }
+
+        console.log(itemD);
+    }
+
+
+    $('#CustID').val("C00-001");
+    $('#txtItemID').val("I00-001");
 
     document.getElementById("item");
     document.getElementById("customer").style.display="none";
@@ -400,39 +439,84 @@
 
 
 
+        function checkIdCust(){
+            let val = $('#CustID').val();
+            let i=0;
+            cutomerList.forEach(function(customer) {
+                if (customer.id==val){
+                   i++;
+                }
+            });
+            if(i>0){
+                return false;
+            }
+            return true;
+        }
 
+    function checkIdItem(){
+        let val =$('#txtItemID').val();
+        let i=0;
+        itemList.forEach(function(customer) {
+            if (customer.id==val){
+                i++;
+            }
+        });
+        if(i>0){
+            return false;
+        }
+        return true;
+    }
 
     $("#btnCustSave111").click(function () {
+        if(checkIdCust()){
+            custId=$('#CustID').val();
 
-        let custId=$('#CustID').val();
-        let CustName=$('#CustName').val();
-        let CustAddress=$('#CustAddress').val();
-        let contact=$('#CustContact').val();
-
-        console.log(custId,CustName,CustAddress,console);
-
-        let tr = $('<tr> <td>'+custId+'</td> <td>'+CustName+'</td> <td>'+CustAddress+'</td> <td>'+contact+'</td></tr>');
-
-        cutomerList.push({id:custId , name:CustName , address:CustAddress , con:contact});
-        //set the row to the table body
-        // tBody.append(tr);
-        $('#tableCustomerBody').append(tr);
+            $('#txtItemName').style.borderColor="blue";
+            let CustName=$('#CustName').val();
+            let CustAddress=$('#CustAddress').val();
+            let contact=$('#CustContact').val();
 
 
-        //set customer ids into place order
-        let selectCustomerId = document.getElementById("custIds");
-        let option = document.createElement("option");
-        option.value=custId;
-        option.text = custId;
-        selectCustomerId.append(option);
+
+            let tr = $('<tr> <td>'+custId+'</td> <td>'+CustName+'</td> <td>'+CustAddress+'</td> <td>'+contact+'</td></tr>');
+
+            let number = cutomerList.push({id:custId , name:CustName , address:CustAddress , con:contact});
+
+            //set the row to the table body
+            // tBody.append(tr);
+            $('#tableCustomerBody').append(tr);
+            if(number>0){
+
+                //set customer ids into place order
+                let selectCustomerId = document.getElementById("custIds");
+                let option = document.createElement("option");
+
+                // $('CustID').val(cusId);
+                option.value=custId;
+                option.text = custId;
+                selectCustomerId.append(option);
+
+                alert("Customer Added");
+                clearfeildCust();
+                incrementCusId(custId);
+            }
+        }else {
+            alert("Id Already Exists");
+        }
 
 
 
     });
+    function clearfeildCust(){
 
+       $('#CustName').val("");
+        $('#CustAddress').val("");
+        $('#CustContact').val("");
+        $('#CustID').focus();
+    }
 
-    console.log(cutomerList);
     $("#customerTable").dblclick(function (event){
+        console.log("Ebuwa table");
         selectedTable=event.target.closest("tr");
         findIndex = cutomerList.findIndex(cutomerList => cutomerList.id === selectedTable.cells[0].textContent);
 
@@ -460,15 +544,18 @@
         cutomerList[findIndex].name=CustName;
         cutomerList[findIndex].address=CustAddress;
         cutomerList[findIndex].con=contact;
+        alert("Customer Updated");
+        clearfeildCust();
 
     });
 
     $('#btnDelteCust').click(function (event){
-        alert("sdsdadsadad");
+        alert("Customer Deleted");
         selectedTable.remove();
 
-        cutomerList.splice(findIndex,1);
-        console.log(cutomerList);
+         cutomerList.splice(findIndex,1);
+        clearfeildCust();
+
     });
 
 
@@ -478,34 +565,51 @@
     let selectedRowItem;
     let itemIndex;
     let table;
+
     $('#btnItemAdd').click(function (event){
+        if(checkIdItem()){
+            let itemId=$('#txtItemID').val();
+            let itemName=$('#txtItemName').val();
+            let itemPrice=$('#txtPrice').val();
+            let itemQty=$('#txtQty').val();
+            table = document.getElementById("itemBody");
+            var row = table.insertRow(table.rows.length);
 
-        let itemId=$('#txtItemID').val();
-        let itemName=$('#txtItemName').val();
-        let itemPrice=$('#txtPrice').val();
-        let itemQty=$('#txtQty').val();
-        table = document.getElementById("itemBody");
-        var row = table.insertRow(table.rows.length);
+            let cell1 = row.insertCell(0);
+            let cell2 = row.insertCell(1);
+            let cell3 = row.insertCell(2);
+            let cell4 = row.insertCell(3);
+            cell1.innerHTML=itemId;
+            cell2.innerHTML=itemName;
+            cell3.innerHTML=itemPrice;
+            cell4.innerHTML=itemQty;
+            let number1 = itemList.push({id:itemId, name:itemName, price:itemPrice, qty:itemQty});
+            if(number1>0){
+                alert("Item Added Sucefully");
+                incrementItemId(itemId);
+                clearfeildItem();
 
-        let cell1 = row.insertCell(0);
-        let cell2 = row.insertCell(1);
-        let cell3 = row.insertCell(2);
-        let cell4 = row.insertCell(3);
-        cell1.innerHTML=itemId;
-        cell2.innerHTML=itemName;
-        cell3.innerHTML=itemPrice;
-        cell4.innerHTML=itemQty;
-        itemList.push({id:itemId, name:itemName, price:itemPrice, qty:itemQty});
+            }
 
-        //set Item ids into place order
-        let selectItemId = document.getElementById("itemIds");
-        let option = document.createElement("option");
-        option.value=itemId;
-        option.text = itemId;
-        selectItemId.append(option);
+            //set Item ids into place order
+            let selectItemId = document.getElementById("itemIds");
+            let option = document.createElement("option");
+            option.value=itemId;
+            option.text = itemId;
+            selectItemId.append(option);
+        }else {
+            alert("Id Already EXISTS")
+        }
+
 
     });
-
+   function clearfeildItem(){
+       // $('#txtItemID').val("");
+       $('#txtItemName').val("");
+       $('#txtPrice').val("");
+       $('#txtQty').val("");
+       $('#txtItemID').focus();
+    }
 
     $("#itemTable").dblclick(function (event){
         selectedRowItem= event.target.closest("tr");
@@ -535,6 +639,8 @@
         selectedRowItem.cells[1].textContent=itemName;
         selectedRowItem.cells[2].textContent=itemPrice;
         selectedRowItem.cells[3].textContent=itemQty;
+        alert("Item Updated Sucefully");
+        clearfeildItem();
     });
 
     $("#btnItemDelete").click(function (event){
@@ -542,11 +648,13 @@
         console.log(itemList);
         console.log(selectedRowItem);
         selectedRowItem.remove();
+        alert("Item Deleted Sucefully");
+        clearfeildItem();
     });
 
 
 //    Place Order From
-
+    var tot=0;
     function getSelectedCustID() {
 
         var selectCustomerID = document.getElementById("custIds");
@@ -575,6 +683,7 @@
         });
     }
     $("#btnAddToCart").click(function (event){
+
        var  qty=$('#txtQtyOd').val();
        var itemforTable;
 
@@ -601,14 +710,15 @@
         cell3.innerHTML=qty;
         cell4.innerHTML=itemforTable.price;
         cell5.innerHTML=itemforTable.price*qty;
-
-
+        tot=tot+itemforTable.price*qty;
+        $('#txtTot').val(tot);
         buttonEdit = document.createElement("button");
         buttonEdit.classList.add("btnEdit");
         buttonEdit.textContent="Edit";
         buttonDelete = document.createElement("button");
         buttonDelete.textContent="Delete";
         buttonDelete.classList.add("btnDelete");
+        buttonDelete.id="btnTableDelete"
 
 
         cell6.insertAdjacentElement("beforeend", buttonEdit);
@@ -617,19 +727,19 @@
 
     });
 
-    tblPlaceOrderBody.addEventListener("click", function(event) {
-        console.log("Ebuwa Table ");
-        if (event.target.classList.contains("buttonDelete")) {
-            console.log("Ebuwa Delete or edit ");
-            // This code will execute when a delete button is clicked
-            // You can access the clicked button's parent row and perform the delete action
-            let row = event.target.closest("tr");
-            // Perform your delete action here using the row data
-            // For example, you can remove the row from the table:
-            row.remove();
-        }
+    $('#btnTableDelete').click(function (event){
+        console.log("Ebuwa");
     });
 
+
+    $('#txtDiscount').keydown(function (event){
+        if(event.key=="Enter"){
+            var dis=$('#txtDiscount').val();
+            console.log(dis);
+            $('#txtSubTot').val(tot-dis);
+        }
+       console.log(event.key)
+    });
 </script>
 </body>
 </html>
