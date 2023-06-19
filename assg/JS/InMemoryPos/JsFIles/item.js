@@ -101,13 +101,29 @@ $("#btnItemUpdate").click(function (event){
 });
 
 $("#btnItemDelete").click(function (event){
-    itemList.splice(itemIndex,1);
 
+    let selectItemId = document.getElementById("itemIds");
+
+    let optionToRemove = selectItemId.querySelector('option[value="' + itemList[itemIndex].id + '"]');
+    if (optionToRemove) {
+        optionToRemove.remove();
+    }
+
+
+
+    itemList.splice(itemIndex,1);
     selectedRowItem.remove();
     alert("Item Deleted Sucefully");
     clearfeildItem();
     $('#txtItemName').val("");
+
     incrementItemId(itemList[itemList.length-1].id);
+
+
+
+
+
+
 
 });
 

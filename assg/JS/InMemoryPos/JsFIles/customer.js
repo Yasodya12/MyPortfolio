@@ -94,10 +94,23 @@ $('#btnUpdateCust').click(function (event){
 
     clearfeildCust();
     incrementCusId(cutomerList[cutomerList.length-1].id);
-    console.log("Cus Listb",cutomerList[cutomerList.length-1]);
+
 });
 
 $('#btnDelteCust').click(function (event){
+
+
+    let selectItemId = document.getElementById("custIds");
+
+    let optionToRemove = selectItemId.querySelector('option[value="' + cutomerList[findIndex].id + '"]');
+    if (optionToRemove) {
+        optionToRemove.remove();
+    }
+
+
+
+
+
     alert("Customer Deleted");
     selectedTable.remove();
 
