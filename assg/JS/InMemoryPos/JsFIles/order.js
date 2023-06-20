@@ -48,6 +48,7 @@ $("#btnAddToCart").click(function (event){
         var cellValue = row.cells[0].innerHTML; // Get the value from the first cell (item ID)
         var  qty=$('#txtQtyOd').val();
         // Check if item ID already exists
+        console.log("Select Id eka ", selectItemID.value);
         if (cellValue === selectItemID.value) {
             // Update the existing row
 
@@ -119,7 +120,7 @@ $('#txtDiscount').keydown(function (event){
 
     if(event.key=="Enter"){
         var dis=$('#txtDiscount').val();
-        console.log(dis);
+
         $('#txtSubTot').val(tot-dis);
     }
 
@@ -128,14 +129,7 @@ $('#txtDiscount').keydown(function (event){
 //Validation    Validation  Validation  Validation
 
 function clearTextFeildOrder(){
-    // let selectElement = document.getElementById("itemIds");
-    //
-    //
-    // let defaultOption = selectElement.options[0]; // Assuming the default option is the first option
-    //
-    // defaultOption.text = "Item ID";
-    // defaultOption.disabled = true;
-    // defaultOption.selected = true;
+    $('#itemIds').val("Item ID");
 
 // Add the default option to the select element
 //     selectElement.appendChild(defaultOption);
@@ -176,23 +170,30 @@ $(document).on("click", ".btnEdit", function() {
     let closest = $(this).closest("tr");
     let text = closest.find("td:eq(0)").text();
 
-
+    $('#itemIds').val(text);
 
     itemList.forEach(function(item) {
+
         if (item.id==text){
             $('#custItemRst').val(item.name);
 
-
+            tot=tot-closest.find("td:eq(4)").text();
             $('#txtPriceRst').val(item.price);
 
             $('#txtQytRst').val(item.qty);
 
         }
+
     });
 });
 
 $(document).on("click", ".btnDelete", function() {
+    let closest1 = $(this).closest("tr");
+    tot=tot-closest1.find("td:eq(4)").text();
      $(this).closest("tr").remove();
+
+    $('#txtTot').val(tot);
+    $('#txtSubTot').val(tot);
 });
 
 $(document).on("click", ".btnPurchase", function() {
