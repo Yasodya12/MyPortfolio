@@ -52,6 +52,11 @@ $("#btnAddToCart").click(function (event){
         if (cellValue === selectItemID.value) {
             // Update the existing row
 
+
+            let closest1 = $(this).closest("tr");
+            tot=tot-closest1.find("td:eq(4)").text();
+
+
             row.cells[2].innerHTML = qty; // Update quantity
 
             row.cells[4].innerHTML = pr * qty; // Update total price
@@ -177,7 +182,7 @@ $(document).on("click", ".btnEdit", function() {
         if (item.id==text){
             $('#custItemRst').val(item.name);
 
-            tot=tot-closest.find("td:eq(4)").text();
+            // tot=tot-closest.find("td:eq(4)").text();
             $('#txtPriceRst').val(item.price);
 
             $('#txtQytRst').val(item.qty);
