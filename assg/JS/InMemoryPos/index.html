@@ -208,7 +208,7 @@
                 <div class="col">
                     <div class="input-group">
                         <span class="input-group-text">Order ID</span>
-                        <input class="form-control" type="text" placeholder="O-001" aria-label="Disabled input example" disabled>
+                        <input id="txtOrderID" class="form-control" type="text" placeholder="O-001" aria-label="Disabled input example" disabled>
                     </div>
                 </div>
                 <div class="col">
@@ -240,7 +240,7 @@
                     <div class="input-group">
                         <span class="input-group-text">Item ID</span>
                         <select id="itemIds" class="form-select" onchange="getSelectedItemID()" aria-label="Default select example">
-                            <option selected disabled hidden>Item ID</option>
+                            <option id="promtItem" selected disabled hidden>Item ID</option>
 
                         </select>
                     </div>
@@ -280,7 +280,7 @@
                 <div class="col-10"></div>
                 <div class="col-2">
                     <button id="btnAddToCart" type="button" class="btn btn-outline-success">Add to Cart</button>
-                    <button type="button" class="btn btn-outline-warning">Clear</button>
+                    <button id="clearButton" type="button" class="btn btn-outline-warning">Clear</button>
                 </div>
             </div>
 
@@ -333,8 +333,8 @@
         <div class="row mt-3">
             <div class="col-10"></div>
             <div class="col-2">
-                <button type="button" class="btn btn-outline-success">Purchase</button>
-                <button type="button" class="btn btn-outline-danger">Cancel</button>
+                <button id="btnPurchase" type="button" class="btn btn-outline-success">Purchase</button>
+                <button id="btnCancel" type="button" class="btn btn-outline-danger">Cancel</button>
             </div>
         </div>
     </section>

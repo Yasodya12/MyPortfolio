@@ -120,11 +120,6 @@ $("#btnItemDelete").click(function (event){
     incrementItemId(itemList[itemList.length-1].id);
 
 
-
-
-
-
-
 });
 
 
