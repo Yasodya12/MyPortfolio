@@ -16,12 +16,15 @@
     <link rel="stylesheet" href="assets/css/Style.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="assets/css/normalize.css" />
+<!--    <script src="assg/JS/InMemoryPos/assets/code.jquery.com_jquery-3.7.0.min.js"></script>-->
 </head>
 <!--<header > <img src="assets/images/Rishika.png" alt=" " width="228" height="169"></header>-->
 <body>
 <!--    <header>HOME ABOUT ME SPECIFICATION PROJECT ZONE CONTACT</header>-->
 
+<div id="preLoader">
 
+</div>
 
 <!--    Home page-->
 <section class="home" data-aos="fade-down" >
@@ -276,6 +279,13 @@
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
     AOS.init();
+    let loader = document.getElementById("preLoader");
+    window.addEventListener("load", function(){
+        console.log("Athulata Eno");
+        loader.style.display="none";
+        console.log("Eliyata gita");
+    })
+
 </script>
 </body>
 
