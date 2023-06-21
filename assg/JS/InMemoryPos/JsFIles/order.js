@@ -53,8 +53,8 @@ $("#btnAddToCart").click(function (event){
             // Update the existing row
 
 
-            let closest1 = $(this).closest("tr");
-            tot=tot-closest1.find("td:eq(4)").text();
+
+
 
 
             row.cells[2].innerHTML = qty; // Update quantity
@@ -174,7 +174,7 @@ $('#btnCancel').click(function (event){
 $(document).on("click", ".btnEdit", function() {
     let closest = $(this).closest("tr");
     let text = closest.find("td:eq(0)").text();
-
+    tot=tot-closest.find("td:eq(4)").text();
     $('#itemIds').val(text);
 
     itemList.forEach(function(item) {
@@ -195,6 +195,7 @@ $(document).on("click", ".btnEdit", function() {
 $(document).on("click", ".btnDelete", function() {
     let closest1 = $(this).closest("tr");
     tot=tot-closest1.find("td:eq(4)").text();
+
      $(this).closest("tr").remove();
 
     $('#txtTot').val(tot);
