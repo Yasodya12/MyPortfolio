@@ -6,24 +6,19 @@
     <link rel="stylesheet" href="assets/css/bootstrap.css">
     <script src="assets/js/bootstrap.js"></script>
     <style>
-        .btnEdit{
-            background-color:black;
-            color: white;
-            border-radius: 5px;
-            border: none; width: 50px;
-            height: 30px;
-            margin-right:5px ;
-        }
-        .btnDelete{
-            background-color:red;
-            color: white;
-            border-radius: 5px;
-            border: none;
-            width: 70px;
-            height: 30px;
-        }
+        #order>div{
+            position: absolute;
+            top: 10vh;
 
+        }
+        #order>div>table{
+            width: 100vw;
+        }
+        #order>h1{
+            position: absolute;
+            left: 40vw;
 
+        }
     </style>
     <script src="assets/code.jquery.com_jquery-3.7.0.min.js"></script>
 
@@ -40,10 +35,14 @@
                         <a id="btnCustomer" class="nav-link active text-warning" aria-current="page" href="#">Customer</a>
                     </li>
                     <li class="nav-item">
-                        <a id="btnOrder" class="nav-link active text-warning" aria-current="page" href="#">Order</a>
+                        <a id="btnOrder" class="nav-link active text-warning" aria-current="page" href="#">Place Order</a>
                     </li>
                     <li class="nav-item">
                         <a id="btnItems" class="nav-link active text-warning" aria-current="page" href="#">Items</a>
+
+                    </li>
+                    <li class="nav-item">
+                        <a id="btnOr" class="nav-link active text-warning" aria-current="page" href="#">Orders</a>
 
                     </li>
                 </ul>
@@ -339,6 +338,28 @@
         </div>
     </section>
 </section>
+
+<section id="order" class="position-relative">
+    <h1 class="display-5 ">Orders Table</h1>
+    <div >
+        <table class="table table-light table-striped">
+            <thead>
+            <tr>
+                <th style="background-color: #CD9A5A" scope="col">Order ID</th>
+                <th style="background-color: #CD9A5A" scope="col">Customer ID</th>
+                <th style="background-color: #CD9A5A" scope="col">Total</th>
+                <th style="background-color: #CD9A5A" scope="col">Discount</th>
+                <th style="background-color: #CD9A5A" scope="col">Sub-Total</th>
+                <th style="background-color: #CD9A5A" scope="col">Date</th>
+            </tr>
+            </thead>
+            <tbody id="tblOrderBody">
+
+            </tbody>
+        </table>
+    </div>
+
+</section>
 <script>
     let cutomerList=[];
     let selectedTable;
@@ -349,9 +370,10 @@
     let itemD;
 
 
-    document.getElementById("item");
-    document.getElementById("customer").style.display="none";
+    document.getElementById("order").style.display="none";
+    document.getElementById("customer").style.display="block";
     document.getElementById("placeORder").style.display="none";
+    document.getElementById("item").style.display="none";
 
 
 
@@ -366,6 +388,7 @@
 
 </script>
 <script src="JsFIles/order.js"></script>
+<script src="JsFIles/orderTable.js"></script>
 <script src="JsFIles/customer.js"></script>
 <script src="JsFIles/item.js"></script>
 </body>
