@@ -49,7 +49,7 @@ $("#btnAddToCart").click(function (event){
         var cellValue = row.cells[0].innerHTML; // Get the value from the first cell (item ID)
         var  qty=$('#txtQtyOd').val();
         // Check if item ID already exists
-        console.log("Select Id eka ", selectItemID.value);
+
         if (cellValue === selectItemID.value) {
             // Update the existing row
 
@@ -146,7 +146,7 @@ function clearTextFeildOrder(){
     $('#txtPriceRst').val("");
 
     $('#custNameRst').val("");
-    $('#txtOrderID').val("");
+
 
 
 }
@@ -202,12 +202,69 @@ $(document).on("click", ".btnDelete", function() {
     $('#txtTot').val(tot);
     $('#txtSubTot').val(tot);
 });
+let orderID = $('#txtOrderID').val("O00-001");
+$('#txtdate').val(new Date().toDateString());
+$("#btnPurchase").click(function (event) {
+    alert("Ebuwa ");
+    let orderID=$('#txtOrderID').val();
+    let custIdOrder=$('#custIds').val();
+    let totOrder=$('#txtTot').val();
+    let disOrder=$('#txtDiscount').val();
+    let subTotOrder=$('#txtSubTot').val();
 
-$(document).on("click", ".btnPurchase", function() {
-    // itemList.forEach(function(item) {
-    //     if (item.id==selectedItemId){
-    //         item.qty=item.qty-qty;
-    //         itemforTable=item;
-    //     }
-    // });
+    table = document.getElementById("tblOrderBody");
+    var row = table.insertRow(table.rows.length);
+
+    let cell1 = row.insertCell(0);
+    let cell2 = row.insertCell(1);
+    let cell3 = row.insertCell(2);
+    let cell4 = row.insertCell(3);
+    let cell5 = row.insertCell(4);
+    let cell6 = row.insertCell(5);
+    cell1.innerHTML=orderID;
+    cell2.innerHTML=custIdOrder;
+    cell3.innerHTML=totOrder;
+    cell4.innerHTML=disOrder;
+    cell5.innerHTML=subTotOrder;
+    cell6.innerHTML=new Date().toDateString();
+    updateItemLit();
+    incrementOrderId(orderID);
+    clearTextAfterPurchase();
 });
+function updateItemLit(){
+    var rowCount = $("#tblPlaceOrderBody tr").length;
+
+    for (var i=0; i<rowCount; i++){
+        console.log("run una");
+    }
+
+}
+// itemList.forEach(function(item) {
+//     if (item.id==selectedItemId){
+//         item.qty=item.qty-qty;
+//         itemforTable=item;
+//     }
+// });
+function incrementOrderId(currentID) {
+    if (currentID==='O00-NaN'){
+        orderID='O00-001';
+    }else {
+        let number =parseInt(currentID.slice(4), 10);
+        number++;
+        orderID = "O00-" + number.toString().padStart(3, "0");
+        $('#txtOrderID').val(orderID);
+
+
+    }
+}
+function clearTextAfterPurchase(){
+    $('#custNameRst').val("");
+    $('#custIds').val("Customer ID");
+    $('#txtTot').val("");
+    $('#txtDiscount').val("");
+    $('#txtSubTot').val("");
+
+     $('#tblPlaceOrderBody').empty(); // Replace "myTable" with the actual ID of your table
+
+
+}
