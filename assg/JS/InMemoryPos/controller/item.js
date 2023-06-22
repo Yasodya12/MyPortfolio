@@ -1,4 +1,4 @@
-let itemList=[];
+
 let selectedRowItem;
 let itemIndex;
 let table;

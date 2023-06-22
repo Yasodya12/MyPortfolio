@@ -11,13 +11,9 @@ document.getElementById("btnCustomer").addEventListener("click", function(){
 $("#btnCustSave111").click(function () {
 
     custId=$('#CustID').val();
-
-
     let CustName=$('#CustName').val();
     let CustAddress=$('#CustAddress').val();
     let contact=$('#CustContact').val();
-
-
 
     let tr = $('<tr> <td>'+custId+'</td> <td>'+CustName+'</td> <td>'+CustAddress+'</td> <td>'+contact+'</td></tr>');
 
