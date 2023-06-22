@@ -233,18 +233,30 @@ $("#btnPurchase").click(function (event) {
 });
 function updateItemLit(){
     var rowCount = $("#tblPlaceOrderBody tr").length;
+    var table = document.getElementById("tblPlaceOrderBody");
+    var tableItem = document.getElementById("itemBody");
 
+    // var firstCell = firstRow.cells[0]
     for (var i=0; i<rowCount; i++){
-        console.log("run una");
+        // var row = table.rows[i].cells[0];
+
+
+        itemList.forEach(function(item) {
+    if (item.id== table.rows[i].cells[0].textContent){
+        tableItem.rows[i].cells[3].textContent=item.qty-table.rows[i].cells[2].textContent;
+        item.qty=item.qty-table.rows[i].cells[2].textContent;
+
+
+
+        // selectedRowItem.cells[0].textContent=itemId;
     }
 
+
+});
+    }
+    console.log("Item TIka ",itemList);
 }
-// itemList.forEach(function(item) {
-//     if (item.id==selectedItemId){
-//         item.qty=item.qty-qty;
-//         itemforTable=item;
-//     }
-// });
+
 function incrementOrderId(currentID) {
     if (currentID==='O00-NaN'){
         orderID='O00-001';
