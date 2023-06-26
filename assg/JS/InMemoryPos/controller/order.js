@@ -1,5 +1,5 @@
+var tot;
 
-var tot=0;
 $("#btnAddToCart").prop("disabled", true);
 
 document.getElementById("btnOrder").addEventListener("click", function(){
@@ -39,15 +39,16 @@ function getSelectedItemID() {
     });
 }
 $("#btnAddToCart").click(function (event){
+    tot=0;
     table = document.getElementById("tblPlaceOrderBody");
     var selectItemID = document.getElementById("itemIds");
 
-    let pr = $('#txtPriceRst').val();
+    let pr =parseInt($('#txtPriceRst').val());
     var itemExists = false;
     for (var i = 0; i < table.rows.length; i++) {
         var row = table.rows[i];
         var cellValue = row.cells[0].innerHTML; // Get the value from the first cell (item ID)
-        var  qty=$('#txtQtyOd').val();
+        var  qty=parseInt($('#txtQtyOd').val());
         // Check if item ID already exists
 
         if (cellValue === selectItemID.value) {
@@ -61,21 +62,24 @@ $("#btnAddToCart").click(function (event){
             row.cells[2].innerHTML = qty; // Update quantity
 
             row.cells[4].innerHTML = pr * qty; // Update total price
-            clearTextFeildOrder();
-            tot=tot+(pr * qty);
-            $('#txtTot').val(tot);
-            $('#txtSubTot').val(tot);
+            // clearTextFeildOrder();
+            // tot=tot+(pr * qty);
+
             // Set the flag to indicate item exists
             itemExists = true;
-            break; // Exit the loop
+            // break; // Exit the loop
         }
+
+        tot=tot+parseInt(row.cells[4].innerHTML);
+        $('#txtTot').val(tot);
+        $('#txtSubTot').val(tot);
     }
 
 
 
 
     if (!itemExists){
-        var  qty=$('#txtQtyOd').val();
+        var  qty=parseInt($('#txtQtyOd').val());
         var itemforTable;
 
         itemList.forEach(function(item) {
@@ -101,7 +105,7 @@ $("#btnAddToCart").click(function (event){
         cell3.innerHTML=qty;
         cell4.innerHTML=itemforTable.price;
         cell5.innerHTML=itemforTable.price*qty;
-        tot=tot+itemforTable.price*qty;
+        tot=tot+parseInt(itemforTable.price*qty);
         $('#txtTot').val(tot);
         $('#txtSubTot').val(tot);
 
@@ -125,7 +129,7 @@ $("#btnAddToCart").click(function (event){
 $('#txtDiscount').keydown(function (event){
 
     if(event.key=="Enter"){
-        var dis=$('#txtDiscount').val();
+        var dis=parseInt($('#txtDiscount').val());
 
         $('#txtSubTot').val(tot-dis);
     }
@@ -153,8 +157,11 @@ function clearTextFeildOrder(){
 $(document).ready(function() {
 
     $("#txtQtyOd").on("keydown", function(event) {
-        var qtyStock=$('#txtQytRst').val();
-       var qtyWant= $("#txtQtyOd").val();
+        var qtyStock=parseInt($('#txtQytRst').val());
+       var qtyWant= parseInt($("#txtQtyOd").val());
+
+       console.log(typeof qtyStock);
+       console.log(typeof qtyWant);
         if(qtyStock<qtyWant ){
             $("#btnAddToCart").prop("disabled", true);
             $("#txtQtyOd").css("border-color", "red");
@@ -195,7 +202,7 @@ $(document).on("click", ".btnEdit", function() {
 
 $(document).on("click", ".btnDelete", function() {
     let closest1 = $(this).closest("tr");
-    tot=tot-closest1.find("td:eq(4)").text();
+    tot=tot-parseInt(closest1.find("td:eq(4)").text());
 
      $(this).closest("tr").remove();
 
