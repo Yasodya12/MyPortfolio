@@ -2967,3 +2967,36 @@ section{
 
 }
 /*End Animation*/
+
+
+
+
+
+.header {
+    background-color: #FA981D;
+    padding: 20px 35px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 0;
+
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+.header ul {
+    list-style: none;
+    display: flex;
+}
+.header ul li {
+    margin: 0 10px;
+}
+
+.logo {
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 30px;
+    font-weight: 700;
+}

@@ -10,36 +10,39 @@ document.getElementById("btnCustomer").addEventListener("click", function(){
 
 $("#btnCustSave111").click(function () {
 
-    custId=$('#CustID').val();
-    let CustName=$('#CustName').val();
-    let CustAddress=$('#CustAddress').val();
-    let contact=$('#CustContact').val();
+    if(checkEmpty()){
+        custId=$('#CustID').val();
+        let CustName=$('#CustName').val();
+        let CustAddress=$('#CustAddress').val();
+        let contact=$('#CustContact').val();
 
-    let tr = $('<tr> <td>'+custId+'</td> <td>'+CustName+'</td> <td>'+CustAddress+'</td> <td>'+contact+'</td></tr>');
+        let tr = $('<tr> <td>'+custId+'</td> <td>'+CustName+'</td> <td>'+CustAddress+'</td> <td>'+contact+'</td></tr>');
 
-    let number = cutomerList.push({id:custId , name:CustName , address:CustAddress , con:contact});
+        let number = cutomerList.push({id:custId , name:CustName , address:CustAddress , con:contact});
 
-    //set the row to the table body
-    // tBody.append(tr);
-    $('#tableCustomerBody').append(tr);
-    if(number>0){
+        //set the row to the table body
+        // tBody.append(tr);
+        $('#tableCustomerBody').append(tr);
+        if(number>0){
 
-        //set customer ids into place order
-        let selectCustomerId = document.getElementById("custIds");
-        let option = document.createElement("option");
+            //set customer ids into place order
+            let selectCustomerId = document.getElementById("custIds");
+            let option = document.createElement("option");
 
-        // $('CustID').val(cusId);
-        option.value=custId;
-        option.text = custId;
-        selectCustomerId.append(option);
+            // $('CustID').val(cusId);
+            option.value=custId;
+            option.text = custId;
+            selectCustomerId.append(option);
 
-        alert("Customer Added");
-        clearfeildCust();
-        incrementCusId(custId);
-        $('#btnCustSave111').prop("disabled", true);
-        $('#btnUpdateCust').prop("disabled", true);
-        $('#btnDelteCust').prop("disabled", true);
+            alert("Customer Added");
+            clearfeildCust();
+            incrementCusId(custId);
+            $('#btnCustSave111').prop("disabled", true);
+            $('#btnUpdateCust').prop("disabled", true);
+            $('#btnDelteCust').prop("disabled", true);
+        }
     }
+
 
 
 });
@@ -72,24 +75,29 @@ $("#customerTable").dblclick(function (event){
 
 
 $('#btnUpdateCust').click(function (event){
-    let custId=$('#CustID').val();
-    let CustName=$('#CustName').val();
-    let CustAddress=$('#CustAddress').val();
-    let contact=$('#CustContact').val();
 
-    selectedTable.cells[0].textContent=custId;
-    selectedTable.cells[1].textContent=CustName;
-    selectedTable.cells[2].textContent=CustAddress;
-    selectedTable.cells[3].textContent=contact;
+    if(checkEmpty()){
+        let custId=$('#CustID').val();
+        let CustName=$('#CustName').val();
+        let CustAddress=$('#CustAddress').val();
+        let contact=$('#CustContact').val();
 
-    cutomerList[findIndex].id=custId;
-    cutomerList[findIndex].name=CustName;
-    cutomerList[findIndex].address=CustAddress;
-    cutomerList[findIndex].con=contact;
-    alert("Customer Updated");
+        selectedTable.cells[0].textContent=custId;
+        selectedTable.cells[1].textContent=CustName;
+        selectedTable.cells[2].textContent=CustAddress;
+        selectedTable.cells[3].textContent=contact;
 
-    clearfeildCust();
-    incrementCusId(cutomerList[cutomerList.length-1].id);
+        cutomerList[findIndex].id=custId;
+        cutomerList[findIndex].name=CustName;
+        cutomerList[findIndex].address=CustAddress;
+        cutomerList[findIndex].con=contact;
+        alert("Customer Updated");
+
+        clearfeildCust();
+        incrementCusId(cutomerList[cutomerList.length-1].id);
+
+    }
+
 
 });
 
@@ -223,3 +231,20 @@ $(document).ready(function() {
         contactRegex(conForReg);
     });
 });
+
+function checkEmpty(){
+    var b=true;
+    if($("#CustName").val()==""){
+        $("#CustName").css("border-color", "red");
+        b=false;
+    }
+    if($("#CustAddress").val()==""){
+        $("#CustAddress").css("border-color", "red");
+        b=false;
+    }
+    if($("#CustContact").val()==""){
+        $("#CustContact").css("border-color", "red");
+        b=false;
+    }
+    return b;
+}
