@@ -13,40 +13,42 @@ document.getElementById("btnItems").addEventListener("click", function (){
 });
 
 $('#btnItemAdd').click(function (event){
+   if (checkEmptyItem()){
+       let itemId=$('#txtItemID').val();
+       let itemName=$('#txtItemName').val();
+       let itemPrice=$('#txtPrice').val();
+       let itemQty=$('#txtQty').val();
+       table = document.getElementById("itemBody");
+       var row = table.insertRow(table.rows.length);
 
-    let itemId=$('#txtItemID').val();
-    let itemName=$('#txtItemName').val();
-    let itemPrice=$('#txtPrice').val();
-    let itemQty=$('#txtQty').val();
-    table = document.getElementById("itemBody");
-    var row = table.insertRow(table.rows.length);
+       let cell1 = row.insertCell(0);
+       let cell2 = row.insertCell(1);
+       let cell3 = row.insertCell(2);
+       let cell4 = row.insertCell(3);
+       cell1.innerHTML=itemId;
+       cell2.innerHTML=itemName;
+       cell3.innerHTML=itemPrice;
+       cell4.innerHTML=itemQty;
+       let number1 = itemList.push({id:itemId, name:itemName, price:itemPrice, qty:itemQty});
+       if(number1>0){
+           alert("Item Added Sucefully");
+           incrementItemId(itemId);
+           clearfeildItem();
+           $('#txtItemName').val("");
 
-    let cell1 = row.insertCell(0);
-    let cell2 = row.insertCell(1);
-    let cell3 = row.insertCell(2);
-    let cell4 = row.insertCell(3);
-    cell1.innerHTML=itemId;
-    cell2.innerHTML=itemName;
-    cell3.innerHTML=itemPrice;
-    cell4.innerHTML=itemQty;
-    let number1 = itemList.push({id:itemId, name:itemName, price:itemPrice, qty:itemQty});
-    if(number1>0){
-        alert("Item Added Sucefully");
-        incrementItemId(itemId);
-        clearfeildItem();
-        $('#txtItemName').val("");
+           $('#btnItemAdd').prop("disabled", true);
+           $('#btnItemUpdate').prop("disabled", true);
+           $('#btnItemDelete').prop("disabled", true);
+       }
 
-        $('#btnItemAdd').prop("disabled", true);
-        $('#btnItemUpdate').prop("disabled", true);
-        $('#btnItemDelete').prop("disabled", true);
-    }
+       //set Item ids into place order
+       let selectItemId = document.getElementById("itemIds");
+       let option = document.createElement("option");
+       option.value=itemId;
+       option.text = itemId;
+       selectItemId.append(option);
+   }
 
-    //set Item ids into place order
-    let selectItemId = document.getElementById("itemIds");
-    let option = document.createElement("option");
-    option.value=itemId;
-    option.text = itemId;
-    selectItemId.append(option);
 
 
 
@@ -75,30 +77,33 @@ $("#itemTable").dblclick(function (event){
 });
 
 $("#btnItemUpdate").click(function (event){
-    let itemId=$('#txtItemID').val();
-    let itemName=$('#txtItemName').val();
-    let itemPrice=$('#txtPrice').val();
-    let itemQty=$('#txtQty').val();
+    if(checkEmptyItem()){
+        let itemId=$('#txtItemID').val();
+        let itemName=$('#txtItemName').val();
+        let itemPrice=$('#txtPrice').val();
+        let itemQty=$('#txtQty').val();
 
 
 
-    itemList[itemIndex].id=itemId;
-    itemList[itemIndex].name=itemName;
-    itemList[itemIndex].price=itemPrice;
-    itemList[itemIndex].qty=itemQty;
+        itemList[itemIndex].id=itemId;
+        itemList[itemIndex].name=itemName;
+        itemList[itemIndex].price=itemPrice;
+        itemList[itemIndex].qty=itemQty;
 
-    selectedRowItem.cells[0].textContent=itemId;
-    selectedRowItem.cells[1].textContent=itemName;
-    selectedRowItem.cells[2].textContent=itemPrice;
-    selectedRowItem.cells[3].textContent=itemQty;
-    alert("Item Updated Sucefully");
-    clearfeildItem();
-    $('#txtItemName').val("");
+        selectedRowItem.cells[0].textContent=itemId;
+        selectedRowItem.cells[1].textContent=itemName;
+        selectedRowItem.cells[2].textContent=itemPrice;
+        selectedRowItem.cells[3].textContent=itemQty;
+        alert("Item Updated Sucefully");
+        clearfeildItem();
+        $('#txtItemName').val("");
 
-    $('#btnItemAdd').prop("disabled", true);
-    $('#btnItemUpdate').prop("disabled", true);
-    $('#btnItemDelete').prop("disabled", true);
-    incrementItemId(itemList[itemList.length-1].id);
+        $('#btnItemAdd').prop("disabled", true);
+        $('#btnItemUpdate').prop("disabled", true);
+        $('#btnItemDelete').prop("disabled", true);
+        incrementItemId(itemList[itemList.length-1].id);
+    }
+
 });
 
 $("#btnItemDelete").click(function (event){
@@ -247,3 +252,19 @@ $(document).ready(function() {
         }
     });
 });
+function checkEmptyItem(){
+    var b=true;
+    if($("#txtItemName").val()==""){
+        $("#txtItemName").css("border-color", "red");
+        b=false;
+    }
+    if($("#txtPrice").val()==""){
+        $("#txtPrice").css("border-color", "red");
+        b=false;
+    }
+    if($("#txtQty").val()==""){
+        $("#txtQty").css("border-color", "red");
+        b=false;
+    }
+    return b;
+}
