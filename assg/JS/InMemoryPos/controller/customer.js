@@ -35,6 +35,9 @@ $("#btnCustSave111").click(function () {
             selectCustomerId.append(option);
 
             alert("Customer Added");
+            $("#CustAddress").css("border-color", "grey");
+            $("#CustContact").css("border-color", "grey");$
+            ("#CustName").css("border-color", "grey");
             clearfeildCust();
             incrementCusId(custId);
             $('#btnCustSave111').prop("disabled", true);

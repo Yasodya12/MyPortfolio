@@ -177,6 +177,9 @@ $('#clearButton').click(function (event){
 });
 $('#btnCancel').click(function (event){
     $("#tblPlaceOrderBody").empty();
+    $("#txtTot").val("");
+    $("#txtSubTot").val("");
+    $("#txtDiscount").val("");
 });
 
 $(document).on("click", ".btnEdit", function() {
@@ -202,9 +205,11 @@ $(document).on("click", ".btnEdit", function() {
 
 $(document).on("click", ".btnDelete", function() {
     let closest1 = $(this).closest("tr");
-    tot=tot-parseInt(closest1.find("td:eq(4)").text());
+    // tot=tot-parseInt(closest1.cells[4].textContent);
+     tot = tot - parseInt($(closest1).find('td:eq(4)').text());
 
-     $(this).closest("tr").remove();
+
+    $(this).closest("tr").remove();
 
     $('#txtTot').val(tot);
     $('#txtSubTot').val(tot);
